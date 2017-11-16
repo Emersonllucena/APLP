@@ -4,23 +4,32 @@
 #include <cstdlib>
 #include <locale.h>
 #include <map>
+#include <set>
 #include <vector>
 #include <assert.h>
 
 using namespace std;
+typedef string Attribute;
+typedef string State;
 
 const int DEFAULT_SLEEP = 1;
 
-map<string, string> message;
-map<string, int> attributes;
-map<string, vector<string> > choices, choice_message, collaterals;
+map<State, string> message;
+map<Attribute, int> attributes;
+map<State, vector<string> > choices, choice_message, collaterals;
+
+set<State> special;
+map<State, pair<Attribute, int> > special_condition;
+map<State, pair<State, State> > special_next_state;
+
 
 void read_input_file() {
-    freopen("decisions", "r", stdin);
+    freopen("decisions", "r", stdin);    
+    
+    string state, msg, dec_state, dec_msg, collateral;
+	int n_decisions, n_collat, quant;
+	
     while(1) {
-        string state, msg, dec_state, dec_msg, collateral;
-        int n_decisions, n_collat;
-
         cin >> state;
         cin.ignore();
         
@@ -51,6 +60,23 @@ void read_input_file() {
             collaterals[state].push_back(collateral);
         }
 
+    }
+    ///CONDITIONALS
+    while(1) {
+        cin >> state;
+        cin.ignore();
+        
+        if(state == "END") break;
+		
+		special.insert(state);
+		
+		string attribute, state1, state2;
+		
+		cin >> attribute >> quant;
+		special_condition[state] = pair<Attribute, int> (attribute, quant);
+		
+		cin >> state1 >> state2;
+		special_next_state[state] = pair<State, State> (state1, state2);
     }
 
     freopen("/dev/tty", "r", stdin);
@@ -101,6 +127,16 @@ void tutorial() {
 }
 
 void play_state(string state) {
+	if(special.count(state)) {
+		string attribute = special_condition[state].first;
+		
+		if(attributes[attribute] <= special_condition[state].second)
+			play_state(special_next_state[state].first);
+		else
+			play_state(special_next_state[state].second);
+		return;
+	}
+	
     cout << message[state] << "\n\n";
 
     for(string col : collaterals[state]) {

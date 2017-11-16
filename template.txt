@@ -8,6 +8,7 @@ blablabla  /// MSG do estado
 1          /// Quantos efeitos colaterais
 sono +     /// sono aumentou (coloca - se diminuiu)
 
+
 Atributos são 
 sono
 nota_calculo
@@ -15,3 +16,11 @@ nota_p1
 dinheiro
 amizade
 amorzinho
+
+
+TEMPLATE CONDICIONAIS - n tem mensagem
+
+43             /// ID do estado
+sono 3         /// sono <= 3
+44             /// proximo estado se condicional for TRUE
+45             /// se for FALSE
