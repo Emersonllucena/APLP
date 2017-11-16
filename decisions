@@ -87,6 +87,252 @@ Hora da prova! Você chega ao CAA a tempo e começa a fazer a temida prova de c�
 13 n_importa
 0
 
+21
+Você não tem mais obrigações para fazer hoje e então você decide que é hora de fazer algo útil com seu tempo.
+2
+22 Estudar python no tst
+23 Chamar crush para ir no cinema
+25 Chamar amigos para ir no cinema
+0
+
+22
+Você terminou duas unidades e já faz loops melhor do que uma montanha-russa! Se sente bem confiante para a próxima prova.
+1
+24 n_importa
+1
+nota_p1 +
+
+23
+- Errr, hoje não vai dar... A amiga do marido da irmã da minha prima de segundo grau está doente e eu vou lá ajudar a cuidar da casa.
+2
+24 Aceitar a situação e ir jogar um pouco
+25 Chamar amigos para o cinema
+0
+
+24
+São 18:00. Você estava descansando e compartilhando memes quando seu colega de quarto te chamou pra comer a pizza que ele pediu. Vocês comem aquela obra de arte com borda recheada enquanto maratonam a nova temporada de Stranger Things.
+1
+26 n_importa
+0
+
+25
+Vocês assistiram Liga da Justiça, que tinha acabado de estreiar, e passam um bom tempo comentando sobre o quão do balacobaco foi o filme!
+1
+25.1 n_importa
+1
+amizade +
+
+25.1
+Está meio tarde e todo mundo divide um uber pra voltar pra casa.
+1
+26 n_importa
+1
+dinheiro -
+
+26
+Você está tão cansado que, ao ver sua cama, adormece assim que encosta a cabeça no travesseiro.
+1
+27 n_importa
+0
+
+27
+Você precisa fazer seu passe escolar para pagar meia passagem no ônibus e sobrar dinheiro pras coxinhas e não tem dia melhor pra isso do que hoje.
+1
+28 n_importa
+0
+
+28
+Você fez o documento sem nenhuma complicação e na volta você desceu na parada de costume, que fica a 3 ruas da sua casa. Mas dessa vez você escuta o típico som de uma 50tinha e nela avista 2 cavalheiros sem capacete.
+3
+29 Agir naturalmente
+30 Correr imediatamente pra casa
+31 Se esconder em um estabelecimento próximo
+0
+
+29
+Você tenta disfarçar, agindo naturalmente.
+1
+29.1 n_importa
+0
+
+29.1
+Eles se aproximam com a moto. Você enxerga um deles com uma peixeira na mão.
+1
+29.2 n_importa
+0
+
+29.2
+A moto passa por você.
+1
+29.3 n_importa
+0
+
+29.3
+Você sua frio.
+1
+29.4
+0
+
+29.4
+Você sente uma mão no ombro.
+1
+29.5
+0
+
+29.5
+- Passa tudo! Anda, anda!
+2
+32 Você se rende e entrega tudo
+33 Reagir
+0
+
+30
+Você se prepara e em uma fração de segundos já está correndo em direção ao prédio.
+1
+30.1 n_importa
+0
+
+30.1
+O barulho da 50tinha aumentou, eles estão te seguindo.
+1
+30.2 n_importa
+0
+
+30.2
+Já dá pra ver o portão da frente. Sua mão já começa a procurar a chave nos bolsos.
+1
+30.3 n_importa
+0
+
+30.3
+Você está de frente ao portão, mas não está conseguindo achar a chave certa!
+1
+30.4 n_importa
+0
+
+30.4
+A chave entrou, mas não está girando! Eles estão chegando e a rua está vazia!
+1
+30.5 n_importa
+0
+
+30.5
+*Cleck!*
+1
+30.6 n_importa
+0
+
+30.6
+O porteiro percebeu a tempo e abriu o portão. Você entra e o fecha, ofegante.
+1
+30.7 n_importa
+0
+
+30.7
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
+1
+34 n_importa
+0
+
+31
+Os sujeitos passam mais de 10 minutos esperando você sair, mas acabam desistindo e vão embora.
+1
+31.1 n_importa
+0
+
+31.1
+Você vai pra casa cautelosamente, olhando para todos os lados como um esquizofrênico.
+1
+31.2 n_importa
+0
+
+31.2
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
+1
+34 n_importa
+0
+
+32
+Você entrega seu celular, relógio e dinheiro. Volta triste para casa. Mas hey, ainda está vivo!
+1
+34 n_importa
+1
+dinheiro -
+
+33
+Você pega ele pelo braço e gira.
+1
+33.1 n_importa
+0
+
+33.1
+O meliante levanta o joelho e vai atingir seu estômago.
+1
+33.2 n_importa
+0
+
+33.2
+Você desvia e o subjulga, torcendo o braço dele para trás.
+1
+33.3 n_importa
+0
+
+33.3
+Você se sente poderoso e justiceiro ameaçando quebrar o braço do assaltante.
+1
+33.4 n_importa
+0
+
+33.4
+Mas... onde está o outro!?
+1
+33.5 n_importa
+0
+
+33.5
+O outro meliante te esfaqueia por trás.
+1
+33.6 n_importa
+0
+
+33.6
+Pegam suas coisas e saem correndo.
+1
+33.7 n_importa
+1
+dinheiro -
+
+33.7
+Alguém te vê no chão sangrando e ligam para o 192.
+1
+33.8 n_importa
+0
+
+33.8
+Você percebe vagamente que está entrando em uma ambulância.
+1
+33.9 n_importa
+0
+
+33.9
+Você não percebe mais nada.
+1
+33.10 n_importa
+0
+
+33.10
+Você morreu.
+1
+33.11
+0
+
+33.11
+Nunca reaja a assaltos.
+1
+END
+0
+
+
 END
 18
 sono 1
