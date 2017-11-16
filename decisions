@@ -23,8 +23,9 @@ Você dorme por mais 15 minutos.
 Você acorda atrasado para a aula. Se arruma apressado e vai de ônibus para a universidade. Chega atrasado para a aula de Introdução à Computação e recebe uma bronca do professor. Mas pelo menos está descansado!
 1
 6 n_importa
-1
+2
 sono -
+professor_bravo -
 
 5
 Você falta a aula para dormir mais.
@@ -87,9 +88,62 @@ Hora da prova! Você chega ao CAA a tempo e começa a fazer a temida prova de c�
 13 n_importa
 0
 
+13
+Ufa! Acabou a prova. Na saída, você encontra alguns amigos. Eles te chamam pra sair. Nada mais justo que relaxar depois de uma prova de cálculo!
+2
+14 Sair com os amigos
+15 Voltar para casa
+0
+
+14
+Vocês saem e se divertem. Gastam um pouco, mas valeu a pena. Hora de ir pra casa! Você se sente um pouco cansado.
+1
+15 n_importa
+2
+amizade +
+sono +
+
+15
+Você chega em casa, quando surge a dúvida: ir pra cama ou estudar um pouco?
+2
+16 Dormir
+17 Estudar
+0
+
+16
+Que dia! Você passa alguns minutos se revirando na cama mas dorme logo em seguida.
+1
+18 n_importa
+0
+
+17
+Você ainda decide estudar algumas horas antes de dormir. Que orgulho!
+1
+17.1 n_importa
+1
+sono +
+
+17.1
+Após o estudo, você está cansado e dorme instantaneamente.
+1
+18 n_importa
+0
+
+19
+Seu despertador toca, mas você está tão cansado que nem percebe. Exagerou demais ontem! Por conta disso, perdeu a aula da manhã.
+1
+21 n_importa
+0
+
+20
+Você acorda normalmente e vai para a aula. Lá, você faz uma atividade em grupo e ganha ponto extra! Ainda bem que não faltou.
+1
+21 n_importa
+0
+
 21
 Você não tem mais obrigações para fazer hoje e então você decide que é hora de fazer algo útil com seu tempo.
-2
+3
 22 Estudar python no tst
 23 Chamar crush para ir no cinema
 25 Chamar amigos para ir no cinema
@@ -170,13 +224,13 @@ A moto passa por você.
 29.3
 Você sua frio.
 1
-29.4
+29.4 n_importa
 0
 
 29.4
 Você sente uma mão no ombro.
 1
-29.5
+29.5 n_importa
 0
 
 29.5
@@ -323,19 +377,87 @@ Você não percebe mais nada.
 33.10
 Você morreu.
 1
-33.11
+33.11 n_importa
 0
 
 33.11
 Nunca reaja a assaltos.
 1
-END
+FIM n_importa
 0
 
+34
+É domingo. Você está sem nada para fazer, quando recebe uma mensagem dos amigos. Um churrasco da turma!
+1
+34.1 n_importa
+0
+
+34.2
+Como você está mais liso que quiabo, não tem dinheiro para ir para o churrasco. Não tem escolha senão ficar estudando. Que domingo!
+1
+36 n_importa
+0
+
+34.3
+Você economizou um pouco nos últimos dias, portanto pode se dar ao luxo de sair hoje.
+2
+35 Sair com os amigos
+36 Ficar em casa e estudar
+0
+
+35
+Você passa o dia no churrasco com os amigos e se diverte bastante. Chega em casa de noite, cansado demais para estudar. Melhor ir dormir!
+1
+37 n_importa
+2
+dinheiro -
+amizade +
+
+36
+Você passa o domingo estudando para P1, parando algumas vezes para jogar. Ninguém é de ferro! Depois de um dia produtivo, você vai dormir.
+1
+37 n_importa
+1
+nota_p1 +
+
+37
+Você acorda na hora, se arruma e vai para a UFCG. Dessa vez, com cuidado redobrado!
+1
+37.1 n_importa
+0
+
+37.1
+Chegando na aula, você recebe a nota da prova de Introdução à Computação. Seis!! Você tem certeza que acertou a última questão.
+2
+38 Pedir recorreção da última questão 
+41 Deixar isso pra lá
+0
+
+39
+Você vai falar com o professor. Ele analisa a prova cuidadosamente e reconhece o erro na correção. Isso quer dizer que você tirou 8!!
+1
+41 n_importa
+0
+
+40
+Você vai falar com o professor, mas ele se lembra do seu rosto. 'Você chega atrasado em todas as minhas aulas!', ele reclama. Depois de um longo sermão, ele 'recorrige' a última questão, mas não encontra erro algum na correção. Que estranho!
+1
+41 n_importa
+0
 
 END
 18
 sono 1
 20
 19
+
+34.1
+dinheiro -3
+34.2
+34.3
+
+38
+professor_bravo -1
+40
+39
 END

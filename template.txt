@@ -16,6 +16,7 @@ nota_p1
 dinheiro
 amizade
 amorzinho
+professor_bravo
 
 
 TEMPLATE CONDICIONAIS - n tem mensagem

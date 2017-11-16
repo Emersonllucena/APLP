@@ -59,7 +59,6 @@ void read_input_file() {
             getline(cin, collateral);
             collaterals[state].push_back(collateral);
         }
-
     }
     ///CONDITIONALS
     while(1) {
