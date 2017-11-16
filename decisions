@@ -1,0 +1,90 @@
+2
+São 7h. Seu despertador toca e é hora de se levantar para a aula. Você se lembra que de tarde tem aula de cálculo. Você está com muito sono, e talvez um pouco de sono a mais seja bom.
+3
+3 Levantar e se arrumar para a aula
+4 Ativar a função soneca e dormir mais
+5 Desligar o alarme e voltar a dormir
+0
+
+3
+Você se arrumou com calma, tomou café e foi de ônibus para a universidade. Você conseguiu chegar pontualmente para a aula.
+1
+6 n_importa
+1
+sono +
+
+4
+Você dorme por mais 15 minutos.
+1
+4.5 n_importa
+0
+
+4.5
+Você acorda atrasado para a aula. Se arruma apressado e vai de ônibus para a universidade. Chega atrasado para a aula de Introdução à Computação e recebe uma bronca do professor. Mas pelo menos está descansado!
+1
+6 n_importa
+1
+sono -
+
+5
+Você falta a aula para dormir mais.
+1
+9 n_importa
+1
+sono -
+
+6
+Acabam as aulas da manhã. Hora de almoçar!
+2
+7 Comer na lanchonete do Olavo
+8 Almoçar no RU
+0
+
+7
+Você almoça um sanduíche do Olavo e ainda sobra tempo para estudar para a prova. Porém sua barriga produz movimentos e barulhos estranhos!
+1
+12 n_importa
+2
+nota_calculo +
+dinheiro -
+
+8
+Você passa horas na fila do RU. Não dá tempo de estudar para a prova. Pelo menos economizou dinheiro!
+1
+12 n_importa
+0
+
+9
+De 10h, acorda descansado e estuda para a prova de cálculo.
+1
+9.1 n_importa
+1
+nota_calculo +
+
+9.1
+Hora de almoçar!
+2
+10 Fazer um bom almoço
+11 Preparar um miojo para dar tempo de estudar mais
+0
+
+10
+Você almoça e se sente satisfeito. Em seguida, pega o ônibus para a universidade.
+1
+12 n_importa
+0
+
+11
+Você almoça rapidamente e usa o restante do tempo para estudar. Em seguida, pega o ônibus para a universidade.
+1
+12 n_importa
+1
+nota_calculo +
+
+12
+Hora da prova! Você chega ao CAA a tempo e começa a fazer a temida prova de cálculo.
+1
+13 n_importa
+0
+
+END
