@@ -14,17 +14,23 @@ tutorial
 0.1
 Você entregou o cãozinho para a sua mãe e ela adorou.
 1
-hora_do_show n_importa
+0.3 n_importa
 0
 
 0.2
 Nossa! Como você pôde esquecer que sua mãe é alérgica a gatos?
 1
+0.3 n_importa
+0
+
+0.3
+Pronto! O jogo é simples assim. Pronto para começar?
+1
 hora_do_show n_importa
 0
 
 hora_do_show
-		~~~~~~~~~~~~~~ Hora do show!!! ~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~ Hora do show!!! ~~~~~~~~~~~~~~
 1
 1 n_importa
 0
@@ -158,8 +164,9 @@ Que dia! Você passa alguns minutos se revirando na cama mas dorme logo em segui
 Você ainda decide estudar algumas horas antes de dormir. Que orgulho!
 1
 17.1 n_importa
-1
+2
 sono +
+nota_p1 +
 
 17.1
 Após o estudo, você está cansado e dorme instantaneamente.
@@ -177,7 +184,8 @@ Seu despertador toca, mas você está tão cansado que nem percebe. Exagerou dem
 Você acorda normalmente e vai para a aula. Lá, você faz uma atividade em grupo e ganha ponto extra! Ainda bem que não faltou.
 1
 21 n_importa
-0
+1
+nota_calculo +
 
 21
 Você não tem mais obrigações para fazer hoje e então você decide que é hora de fazer algo útil com seu tempo.
@@ -425,7 +433,7 @@ FIM n_importa
 0
 
 34
-É domingo. Você está sem nada para fazer, quando recebe uma mensagem dos amigos. Um churrasco da turma!
+Você acorda cedo. É domingo. Você está sem nada para fazer, quando recebe uma mensagem dos amigos. Um churrasco da turma!
 1
 34.1 n_importa
 0
@@ -536,7 +544,7 @@ Parabéns! Você treinou muito e terminou P1. Agora é visto como um mago pelos 
 0
 
 48
-Ao chegar em casa e conectar-se ao wifi do vizinho, você recebe duas mensagens no zapzap
+Ao chegar em casa e conectar-se ao wifi do vizinho, você recebe duas mensagens no whatsapp
 1
 48.1 n_importa
 0
@@ -554,28 +562,28 @@ Ao chegar em casa e conectar-se ao wifi do vizinho, você recebe duas mensagens 
 0
 
 48.3
-Lembre se que seus amigos têm zombado do seu elo baixo...
+Lembre se que seus amigos estão zombando que você joga mal no computador...
 3
 50 Sair com a mina gata
 52 Sair com instant crush do R.U.
-51 Aproveitar pra subir de elo
+51 Aproveitar pra treinar no jogo e ganhar dos amigos
 0
 
 49
-zapzap tocou...
+Mensagem no whatsapp...
 1
 49.1 n_importa
 0
 
 49.1
-"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hj" - Mina gata que faz um ano que só te dá bolo
+"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hoje" - Mina gata que faz um ano que só te dá bolo
 2
 50 Aceita o convite
-51 Fica em casa subindo de elo
+51 Fica em casa jogando
 0
 
 50
-"Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei kkkk" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
+"Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei hahaha" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
 1
 50.1 n_importa
 0
@@ -587,13 +595,13 @@ Sendo cavalheiro, você pagou os ingressos e o jantar depois do filme...
 0
 
 50.2
-"Obrigado por tudo, você é como um irmão pra mim!" - Isso foi o que ela disse quando você tentou beijá-la
+"Obrigada por tudo, mas você é como um irmão pra mim!" - Isso foi o que ela disse quando você tentou beijá-la
 1
 53 n_importa
 0
 
 51
-Parece que é só isso que você sabe fazer direito, você ganhou a MD5 pro próximo elo
+Parece que é só isso que você sabe fazer direito, jogar, jogar e jogar.
 1
 53 n_importa
 0
@@ -618,7 +626,7 @@ Ao ir para a garagem, você reuniu toda sua coragem e arriscou um beijo...
 0
 
 52.3
-Vocês se pegaram por mais de duas horas e marcaram outro encontro, mas sem data definida.
+Vocês ficaram por horas e marcaram outro encontro, mas sem data definida.
 1
 53 n_importa
 0
@@ -636,13 +644,14 @@ Você acorda normalmente, toma um café da manhã bem reforçado pra sobreviver 
 0
 
 56
-Durante a aula seus amigos te chamam para ir no espetinho no fim do dia pra desopilar.
+Como você está sendo um bom amigo, durante a aula seus amigos te chamam para ir no espetinho no fim do dia pra desopilar.
 1
 57 n_importa
-0
+1
+amizade +
 
 57
-Deu a hora do almoço e bateu aquela dúvida de sempre...
+Após a aula, deu a hora do almoço e bateu aquela dúvida de sempre...
 2
 58 Comer no RU
 59 Almoçar no Olavão

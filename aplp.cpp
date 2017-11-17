@@ -119,11 +119,39 @@ void end_game() {
 		}
 		press_key();
 		
-		int amorzinho = attributes["amorzinho"];
+		cout << "Fim de periodo! O que voce conseguiu? Vamos ver:\n";
+		press_key();
+		
+		cout << nota_calculo << " em calculo.\n";
+		press_key();
+		
+		int nota_intr = 6;
+		if(visited.count("39")) nota_intr = 8;
+		cout << nota_intr << " em IC.\n";
+		press_key();
+		
+		if(visited.count("46.1")) {
+			cout << "Voce nao terminou a ultima unidade de P1\n";
+		} else {	
+			cout << "Voce conseguiu finalizar P1!!\n";
+		}
+		press_key();
+		
+		int amorzinho = attributes["amorzinho"], amizade = attributes["amizade"];
+		
+		if(amizade >= 2) {
+			cout << "Voce foi um bom amigo durante o periodo e e' querido por todos da turma\n";
+		} else {
+			cout << "Voce saiu pouco com sua turma, e por isso, passou as ferias um pouco sozinho. Seja mais sociavel!\n";
+		}
+		press_key();
+		
 		if(amorzinho >= 3) {
 			cout << "Nas proximas semanas, voce e seu amor ficam cada vez mais proximos. Tudo indica que vai dar namoro!\n";
-			press_key();
+		} else {
+			cout << "Acaba o periodo e voce nao arranja uma namorada! Paciencia...\n";
 		}
+		press_key();
 		
 		cout << "Fim do jogo! Sera' que poderia ter ido melhor?\n";
 		press_key();
