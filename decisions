@@ -578,8 +578,7 @@ zapzap tocou...
 "Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei kkkk" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
 1
 50.1 n_importa
-1
-amorzinho +
+0
 
 50.1
 Sendo cavalheiro, você pagou os ingressos e o jantar depois do filme...
@@ -603,7 +602,8 @@ Parece que é só isso que você sabe fazer direito, você ganhou a MD5 pro pró
 O filme foi ótimo. Ela pegou na sua mão no final do filme e vocês curtiram os créditos muito próximos um do outro
 1
 52.1 n_importa
-0
+1
+amorzinho +
 
 52.1
 Mais próximos do que seria normal para dois seres humanos que não quisessem se beijar
@@ -693,15 +693,22 @@ FIM n_importa
 0
 
 60
-Você encontra novamente aquela que já virou o main() do seu programa e conversam até a hora da aula de cálculo. Ela diz que talvez vá no espetinho passar um tempo com você.
+Você encontra novamente aquela que já virou o main() do seu programa e conversam até a hora da aula de cálculo. Vocês marcam de sair nesse final de semana e voce gosta cada vez mais dela.
 1
 62 n_importa
-0
+1
+amorzinho +
 
 61
 Você almoça normalmente e vai pra aula de cálculo.
 1
 62 n_importa
+0
+
+62
+Você chega na aula de cálculo. O professor corrigiu sua nota! Você se levanta para ver e...
+1
+FIM aaaa
 0
 
 END
