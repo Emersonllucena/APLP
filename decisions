@@ -82,9 +82,10 @@ Acabam as aulas da manhã. Hora de almoçar!
 Você almoça um sanduíche do Olavo e ainda sobra tempo para estudar para a prova. Porém sua barriga produz movimentos e barulhos estranhos!
 1
 12 n_importa
-2
+3
 nota_calculo +
 dinheiro -
+olavo +
 
 8
 Você passa horas na fila do RU. Não dá tempo de estudar para a prova. Pelo menos economizou dinheiro!
@@ -466,7 +467,7 @@ Você acorda na hora, se arruma e vai para a UFCG. Dessa vez, com cuidado redobr
 37.1
 Chegando na aula, você recebe a nota da prova de Introdução à Computação. Seis!! Você tem certeza que acertou a última questão.
 2
-38 Pedir recorreção da última questão 
+38 Pedir recorreção da última questão
 41 Deixar isso pra lá
 0
 
@@ -490,7 +491,7 @@ São 12h em ponto e, devido o calor, sua cabeça já não funciona normalmente. 
 0
 
 42
-Você está na cauda da fila, mas por sorte há uma pessoa muito atraente na sua frente. Vocês trocam alguns olhares e você decide comentar a satisfação de não ser um fura fila. 
+Você está na cauda da fila, mas por sorte há uma pessoa muito atraente na sua frente. Vocês trocam alguns olhares e você decide comentar a satisfação de não ser um fura fila.
 1
 42.1 n_importa
 1
@@ -500,8 +501,7 @@ amorzinho +
 Ela diz que sente o mesmo e um diálogo muito agradável se desenrola. Talvez ela seja o ponto e vírgula que faltava para sua vida compilar.
 1
 44 n_importa
-1
-amorzinho +
+0
 
 43
 Você degusta seu Big Olavão acompanhado de um delicioso suco de maracujá envelhecido por 7 dias em uma garrafa PET. Sua barriga para de fazer barulho, mas surge um intenso enjoo.
@@ -542,7 +542,7 @@ Ao chegar em casa e conectar-se ao wifi do vizinho, você recebe duas mensagens 
 0
 
 48.1
-"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hj" - Mina gata que faz um ano que só te dá bolo
+"oi, desculpa nao ter ido quando vc me chamou... tava muito ocupada. Vamos hj" - Mina gata que faz um ano que só te dá bolo
 1
 48.2 n_importa
 0
@@ -578,7 +578,8 @@ zapzap tocou...
 "Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei kkkk" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
 1
 50.1 n_importa
-0
+1
+amorzinho +
 
 50.1
 Sendo cavalheiro, você pagou os ingressos e o jantar depois do filme...
@@ -617,15 +618,92 @@ Ao ir para a garagem, você reuniu toda sua coragem e arriscou um beijo...
 0
 
 52.3
-Vocês se pegaram por mais de duas horas e marcaram outro encontro, mas sem data definida
+Vocês se pegaram por mais de duas horas e marcaram outro encontro, mas sem data definida.
 1
 53 n_importa
 0
 
 53
 "Hora de dormir..."
+1
+54 n_importa
 0
+
+54
+Você acorda normalmente, toma um café da manhã bem reforçado pra sobreviver a mais um dia de fim de período.
+1
+55 n_importa
 0
+
+56
+Durante a aula seus amigos te chamam para ir no espetinho no fim do dia pra desopilar.
+1
+57 n_importa
+0
+
+57
+Deu a hora do almoço e bateu aquela dúvida de sempre...
+2
+58 Comer no RU
+59 Almoçar no Olavão
+0
+
+59.1
+Você come aquele x-burguer basicão. Sente algo esquisito no seu estômago, mas nada sério e logo passa.
+1
+62 n_importa
+1
+olavo +
+
+59.2
+Você come aquele x-burguer basicão.
+1
+59.3 n_importa
+1
+olavo +
+
+59.3
+Algo parece estranho no seu estômago, você pede um suco pra tentar acalmá-lo.
+1
+59.4 n_importa
+0
+
+59.4
+Você sente sua consciência se esvaindo e cai no chão.
+1
+59.5 n_importa
+0
+
+59.5
+Pessoas tentam se aproximar e prestar socorro, mas você só consegue pensar no quão saborosa aparenta ser a carne humana.
+1
+59.6 n_importa
+0
+
+59.6
+Você virou um mutante e agora vive no laguinho junto daqueles que tiveram o mesmo fim que você.
+1
+59.7 n_importa
+0
+
+59.7
+Cuide da sua alimentação.
+1
+FIM n_importa
+0
+
+60
+Você encontra novamente aquela que já virou o main() do seu programa e conversam até a hora da aula de cálculo. Ela diz que talvez vá no espetinho passar um tempo com você.
+1
+62 n_importa
+0
+
+61
+Você almoça normalmente e vai pra aula de cálculo.
+1
+62 n_importa
+0
+
 END
 
 18
@@ -644,13 +722,28 @@ professor_bravo -1
 39
 
 45
-nota_p1 2 
+nota_p1 2
 46
 46.2
 
 47
-amorzinho 1
+amorzinho 0
 49
 48
+
+55
+amizade 1
+57
+56
+
+58
+amorzinho 1
+61
+60
+
+59
+olavo 1
+59.1
+59.2
 
 END

@@ -22,24 +22,24 @@ map<State, pair<State, State> > special_next_state;
 
 
 void read_input_file() {
-    freopen("decisions", "r", stdin);    
-    
+    freopen("decisions", "r", stdin);
+
     string state, msg, dec_state, dec_msg, collateral;
 	int n_decisions, n_collat, quant;
-	
+
     while(1) {
         cin >> state;
         cin.ignore();
-        
+
         if(state == "END") break;
 
         getline(cin, msg);
         message[state] = msg;
-        
+
 
         cin >> n_decisions;
         cin.ignore();
-        
+
         for(int i = 0; i < n_decisions; i++) {
             cin >> dec_state;
             cin.ignore();
@@ -62,16 +62,16 @@ void read_input_file() {
     while(1) {
         cin >> state;
         cin.ignore();
-        
+
         if(state == "END") break;
-		
+
 		special.insert(state);
-		
+
 		string attribute, state1, state2;
-		
+
 		cin >> attribute >> quant;
 		special_condition[state] = pair<Attribute, int> (attribute, quant);
-		
+
 		cin >> state1 >> state2;
 		special_next_state[state] = pair<State, State> (state1, state2);
     }
@@ -105,17 +105,17 @@ void play_state(string state) {
 		end_game();
 		return;
 	}
-	
+
 	if(special.count(state)) {
 		string attribute = special_condition[state].first;
-		
+
 		if(attributes[attribute] <= special_condition[state].second)
 			play_state(special_next_state[state].first);
 		else
 			play_state(special_next_state[state].second);
 		return;
 	}
-	
+
     cout << message[state] << "\n\n";
 
     for(string col : collaterals[state]) {
@@ -129,14 +129,14 @@ void play_state(string state) {
         press_key();
         play_state(choices[state][0]);
     } else {
-        cout << " O que você irá fazer?\n\n";
+        cout << " O que vocï¿½ irï¿½ fazer?\n\n";
         for(int i = 0; i < (int) choices[state].size(); i++) {
             cout << (i+1) << " - " << choice_message[state][i] << endl;
         }
 
         int choice = read_key() - 1;
         if(choice >= (int) choices[state].size()) {
-            cout << " (!) Escolha inválida\n";
+            cout << " (!) Escolha invï¿½lida\n";
             press_key();
             play_state(state);
         } else {
@@ -153,17 +153,17 @@ void play_menu() {
     cout << "----------------------------------------------------------\n";
     cout << "| Como jogar?                                             |\n";
     cout << "----------------------------------------------------------\n";
-    cout << "| - Você se deparará com situações onde deverá fazer      |\n";
+    cout << "| - Vocï¿½ se depararï¿½ com situaï¿½ï¿½es onde deverï¿½ fazer      |\n";
     cout << "| algumas escolhas para poder prosseguir. Repare que suas |\n";
     cout << "| escolhas podem impactar no rumo da sua vida, portanto,  |\n";
-    cout << "| faça as escolhas da maneira que você julgar melhor.     |\n";
+    cout << "| faï¿½a as escolhas da maneira que vocï¿½ julgar melhor.     |\n";
     cout << "----------------------------------------------------------\n\n";
 
     press_key();
-    
+
     attributes.clear();
     visited.clear();
-    
+
 	play_state("tutorial");
     std::system("clear");
 }
@@ -171,9 +171,9 @@ void play_menu() {
 void credits_menu() {
     cout << " -----------------------------------------\n";
     cout << "| Universidade Federal de Campina Grande  |\n";
-    cout << "| Departamento de Sistemas e Computação   |\n";
+    cout << "| Departamento de Sistemas e Computaï¿½ï¿½o   |\n";
     cout << " -----------------------------------------\n";
-    cout << "| Paradigmas de Linguagens de Programação |\n";
+    cout << "| Paradigmas de Linguagens de Programaï¿½ï¿½o |\n";
     cout << " ----------------------------------------\n";
     cout << "| Professor:                              |\n";
     cout << "| -- Everton Leandro                      |\n";
@@ -194,12 +194,12 @@ void main_menu() {
     cout << "|         Menu Principal        |\n";
     cout << " ------------------------------- \n";
     cout << "| 1 - Jogar                     |\n";
-    cout << "| 2 - Créditos                  |\n";
+    cout << "| 2 - Crï¿½ditos                  |\n";
     cout << "| 3 - Sair                      |\n";
     cout << " ------------------------------- \n\n";
 
     int option;
-    cout << " (?) Informe a opção desejada: ";
+    cout << " (?) Informe a opï¿½ï¿½o desejada: ";
     cin >> option;
     cin.ignore();
     std::system("clear");
@@ -213,7 +213,7 @@ void main_menu() {
     } else if (option == 3) {
         cout << "Obrigado por jogar :D\n";
     } else {
-        cout << " (!) Opção Inválida\n";
+        cout << " (!) Opï¿½ï¿½o Invï¿½lida\n";
         std::system("clear");
         main_menu();
     }
