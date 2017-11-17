@@ -283,9 +283,8 @@ void main_menu() {
 int main() {
     setlocale(LC_ALL, "Portuguese");
     read_input_file();
-
-    //cout << "\n\n"; play_state("62"); /// Apenas para testar mais rapido
-
+	
+	std::system("clear");
     main_menu();
     return 0;
 }
