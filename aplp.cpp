@@ -16,7 +16,7 @@ map<State, string> message;
 map<Attribute, int> attributes;
 map<State, vector<string> > choices, choice_message, collaterals;
 
-set<State> special;
+set<State> special, visited;
 map<State, pair<Attribute, int> > special_condition;
 map<State, pair<State, State> > special_next_state;
 
@@ -96,7 +96,16 @@ int read_key() {
     return choice;
 }
 
+void end_game() {
+}
+
 void play_state(string state) {
+	visited.insert(state);
+	if(state == "FIM") {
+		end_game();
+		return;
+	}
+	
 	if(special.count(state)) {
 		string attribute = special_condition[state].first;
 		
@@ -151,6 +160,10 @@ void play_menu() {
     cout << "----------------------------------------------------------\n\n";
 
     press_key();
+    
+    attributes.clear();
+    visited.clear();
+    
 	play_state("tutorial");
     std::system("clear");
 }
