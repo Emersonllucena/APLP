@@ -12,8 +12,6 @@ using namespace std;
 typedef string Attribute;
 typedef string State;
 
-const int DEFAULT_SLEEP = 1;
-
 map<State, string> message;
 map<Attribute, int> attributes;
 map<State, vector<string> > choices, choice_message, collaterals;
@@ -90,39 +88,12 @@ void press_key() {
 
 int read_key() {
     int choice;
-    cout << " (?) Informe a sua escolha: ";
+    cout << "\n (?) Informe a sua escolha: ";
     cin >> choice;
     cin.ignore();
     std::system("clear");
     cout << endl;
     return choice;
-}
-
-void tutorial() {
-    cout << "------------------------------------------------------------\n";
-    cout << "| Aqui vai um tutorial bem simples pra você se habituar com |\n";
-    cout << "| o estilo do jogo                                          |\n";
-    cout << "------------------------------------------------------------\n\n";
-
-    cout << " (!) É aniversário da sua mãe e você gostaria de dar um \n";
-    cout << "animal de estimação para ela.\n\n";
-    cout << " - Qual animal de estimação você irá escolher?\n\n";
-    cout << " 1 - Cão\n";
-    cout << " 2 - Gato\n\n";
-
-    int choice = read_key();
-
-    if (choice == 1) {
-        cout << "\n (!) Você entrega o cãozinho para sua mãe e ela adora seu presente\n\n";
-        press_key();
-    } else if (choice == 2) {
-        cout << "\n (!) Nossa, como você pôde esquecer que sua mãe é alérgica à gatos?\n\n";
-        press_key();
-    } else {
-        cout << " (!) Escolha inválida\n";
-        press_key();
-        tutorial();
-    }
 }
 
 void play_state(string state) {
@@ -149,7 +120,7 @@ void play_state(string state) {
         press_key();
         play_state(choices[state][0]);
     } else {
-        cout << "O que você irá fazer?\n\n";
+        cout << " O que você irá fazer?\n\n";
         for(int i = 0; i < (int) choices[state].size(); i++) {
             cout << (i+1) << " - " << choice_message[state][i] << endl;
         }
@@ -165,6 +136,10 @@ void play_state(string state) {
     }
 }
 
+void tutorial() {
+	play_state("tutorial");
+}
+
 void play_menu() {
     cout << "----------------------------------------------------------\n";
     cout << "| Como jogar?                                             |\n";
@@ -176,30 +151,8 @@ void play_menu() {
     cout << "----------------------------------------------------------\n\n";
 
     press_key();
-    tutorial();
-
-    cout << "               -----------------------------------------------\n";
-    cout << "              | ~~~~~~~~~~~~~~~ Hora do show! ~~~~~~~~~~~~~~~ |\n";
-    cout << "               -----------------------------------------------\n\n";
-
-    press_key();
-
-    string character_name;
-    cout << " (?) Informe o seu nome: ";
-    cin >> character_name;
-    cin.ignore();
-
+	play_state("tutorial");
     std::system("clear");
-
-    cout << "Olá, " << character_name << ". Após algumas semanas como um bom \n";
-    cout << "fera do curso de Ciência da Computação da UFCG, você já passou por \n";
-    cout << "algumas situações bem típicas de um estudante universitário. No entanto, \n";
-    cout << "como todos sabem, a vida é uma caixinha de surpresas e sempre nos reserva \n";
-    cout << "situações bobas e inusitadas. Bom, vamos deixar de conversa fiada.\n";
-    cout << "Pronto para começar?\n";
-
-    press_key();
-    play_state("2");
 }
 
 void credits_menu() {
@@ -248,17 +201,16 @@ void main_menu() {
         cout << "Obrigado por jogar :D\n";
     } else {
         cout << " (!) Opção Inválida\n";
-        //sleep(DEFAULT_SLEEP);
         std::system("clear");
         main_menu();
     }
 }
 
 int main() {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese");
     read_input_file();
 
-    cout << "\n\n"; play_state("2"); /// Apenas para testar mais rapido
+    //cout << "\n\n"; play_state("2"); /// Apenas para testar mais rapido
 
     main_menu();
     return 0;

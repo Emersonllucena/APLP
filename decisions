@@ -1,3 +1,40 @@
+tutorial
+~~ Aqui vai um tutorialzinho pra você se habituar com o estilo do jogo ~~
+1
+0 n_importa
+0
+
+0
+É aniversário da sua mãe e você gostaria de dar um animal de estimação para ela. Qual animal de estimação você irá escolher?
+2
+0.1 Presentiar sua mãe com um Cão
+0.2 Presentiar sua mãe com um Gato
+0
+
+0.1
+Você entregou o cãozinho para a sua mãe e ela adorou.
+1
+hora_do_show n_importa
+0
+
+0.2
+Nossa! Como você pôde esquecer que sua mãe é alérgica a gatos?
+1
+hora_do_show n_importa
+0
+
+hora_do_show
+		~~~~~~~~~~~~~~ Hora do show!!! ~~~~~~~~~~~~~~
+1
+1 n_importa
+0
+
+1
+Olá. Após algumas semanas como um bom fera do curso de Ciência da Computação da UFCG, você já passou por algumas situações bem típicas de um estudante universitário. No entanto, como todos sabem, a vida é uma caixinha de surpresas e sempre nos reserva situações bobas e inusitadas. Bom, vamos deixar de conversa fiada. Pronto para começar?
+1
+2 n_importa
+0
+
 2
 São 7h. Seu despertador toca e é hora de se levantar para a aula. Você se lembra que de tarde tem aula de cálculo. Você está com muito sono, e talvez um pouco de sono a mais seja bom.
 3
