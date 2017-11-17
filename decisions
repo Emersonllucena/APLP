@@ -507,7 +507,25 @@ olavo +
 44
 Hora do último miniteste de P1. Você se dirige ao LCC2, senta-se confortavelmente e em seguida começa a resolver. Você precisa fazer 3 questões para passar de unidade.
 1
-44.1 n_importa
+45 n_importa
+0
+
+46
+Você conseguiu fazer duas questões, mas continua na mesma unidade
+1
+46.1 n_importa
+0
+
+46.1
+A terceira quase foi, mas você estava nervoso e não conseguiu encontrar o que causou o .....F
+1
+47 n_importa
+0
+
+46.2
+Parabéns! Você treinou muito e terminou P1. Agora é visto como um mago pelos feras que estão presos na unidade 4.
+1
+47 n_importa
 0
 
 END
@@ -526,5 +544,10 @@ dinheiro -3
 professor_bravo -1
 40
 39
+
+45
+nota_p1 2 
+46
+46.2
 
 END
