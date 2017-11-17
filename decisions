@@ -556,9 +556,9 @@ Ao chegar em casa e conectar-se ao wifi do vizinho, você recebe duas mensagens 
 48.3
 Lembre se que seus amigos têm zombado do seu elo baixo...
 3
-51 Sair com a mina gata
+50 Sair com a mina gata
 52 Sair com instant crush do R.U.
-53 Aproveitar pra subir de elo
+51 Aproveitar pra subir de elo
 0
 
 49
@@ -568,8 +568,64 @@ zapzap tocou...
 0
 
 49.1
+"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hj" - Mina gata que faz um ano que só te dá bolo
+2
+50 Aceita o convite
+51 Fica em casa subindo de elo
+0
 
+50
+"Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei kkkk" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
+1
+50.1 n_importa
+0
 
+50.1
+Sendo cavalheiro, você pagou os ingressos e o jantar depois do filme...
+1
+50.2 n_importa
+0
+
+50.2
+"Obrigado por tudo, você é como um irmão pra mim!" - Isso foi o que ela disse quando você tentou beijá-la
+1
+53 n_importa
+0
+
+51
+Parece que é só isso que você sabe fazer direito, você ganhou a MD5 pro próximo elo
+1
+53 n_importa
+0
+
+52
+O filme foi ótimo. Ela pegou na sua mão no final do filme e vocês curtiram os créditos muito próximos um do outro
+1
+52.1 n_importa
+0
+
+52.1
+Mais próximos do que seria normal para dois seres humanos que não quisessem se beijar
+1
+52.2 n_importa
+0
+
+52.2
+Ao ir para a garagem, você reuniu toda sua coragem e arriscou um beijo...
+1
+52.3 n_importa
+0
+
+52.3
+Vocês se pegaram por mais de duas horas e marcaram outro encontro, mas sem data definida
+1
+53 n_importa
+0
+
+53
+"Hora de dormir..."
+0
+0
 END
 
 18
