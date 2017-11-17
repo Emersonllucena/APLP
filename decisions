@@ -445,7 +445,16 @@ Você vai falar com o professor, mas ele se lembra do seu rosto. 'Você chega at
 41 n_importa
 0
 
+41
+São 12h em ponto e, devido o calor, sua cabeça já não funciona normalmente. É possível ouvir o som do apocalipse em sua barriga. Como estudante de computação, você consegue prever que almoçará às 13h caso enfrente a fila do R.U. Mas onde há olavão, há esperança
+2
+42 Comer no R.U.
+43 Comer um Big Olavão para acalmar o caos na sua barriga
+0
+
+
 END
+
 18
 sono 1
 20
@@ -460,4 +469,5 @@ dinheiro -3
 professor_bravo -1
 40
 39
+
 END
