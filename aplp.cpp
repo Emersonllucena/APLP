@@ -80,7 +80,7 @@ void read_input_file() {
 }
 
 void press_key() {
-    cout << " (!) Pressione alguma tecla para prosseguir... ";
+    cout << " (!) Pressione ENTER para prosseguir... ";
     cin.ignore();
     std::system("clear");
     cout << endl;
@@ -98,11 +98,13 @@ int read_key() {
 
 void end_game() {
 	if(visited.count("33")) {
-		cout << "Voce morreu porque tentou ser corajoso demais. Lembre-se: você e' apenas um estudante de computacao!\n";
+		cout << "Voce morreu porque tentou ser corajoso demais. Lembre-se: voce e' apenas um estudante de computacao!\n";
+		press_key();
 	} else if(visited.count("59.7")) {
 		cout << "Voce nao manteve habitos muito saudaveis. Eu sei, e' apenas um estudante! Mas se cuide na proxima\n";
+		press_key();
 	} else {
-		int nota_calculo = 7 + attributes["nota_calculo"];
+		int nota_calculo = 6 + attributes["nota_calculo"];
 		cout << nota_calculo << "!!!\n";
 		press_key();
 		
