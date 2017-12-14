@@ -25,14 +25,17 @@ split' x y =
         else split' (takeOffWord b x) y
     where b = nextWord x '\n'
 
-findState :: String -> [String] -> Int
-findState state universe = findState' state universe 0
+findState :: String -> [String] -> [String] -> Int
+findState state universe path = findState' state universe 0 path
 
-findState' :: String -> [String] -> Int -> Int
-findState' state universe index =
-    if state == universe !! index
-        then index
-        else findState' state universe (endOfState universe index)
+findState' :: String -> [String] -> Int -> [String] -> Int
+findState' state universe index path
+    | universe !! index == "END" = do
+        let newState = universe !! readSpecialState state universe (index+1) path
+        findState newState universe path
+
+    | state == universe !! index = index
+    | otherwise = findState' state universe (endOfState universe index) path
 
 endOfState :: [String] -> Int -> Int
 endOfState universe start = jumpLines universe (jumpLines universe (start+2))
@@ -66,19 +69,60 @@ readOptions universe opts = do
 
 
 limpaTela :: IO ()
-limpaTela = putStr (take 4 (cycle "\n"))
+limpaTela = putStr (take 100 (cycle "\n"))
 
-readState :: String -> [String] -> IO ()
-readState state universe = do
-    let comeco = findState state universe
+findSpecialState :: String -> [String] -> Int -> Int
+findSpecialState state universe index =
+    if universe !! index == state
+        then index
+        else findSpecialState state universe (index+4)
+
+countAtribute :: String -> Int -> [String] -> Int
+countAtribute _ 0 _ = 0
+countAtribute atributo linha universe = do
+    let qtd = read (universe !! linha)
+    if qtd == 0
+        then 0
+        else countAtribute' atributo (linha+1) qtd universe
+
+countAtribute' :: String -> Int -> Int -> [String] -> Int
+countAtribute' _ _ 0 _ = 0
+countAtribute' atributo linha qtd universe
+    | universe!!linha == atributo++" +" = 1 + countAtribute' atributo (linha+1) (qtd-1) universe
+    | universe!!linha == atributo++" -" = (-1) + countAtribute' atributo (linha+1) (qtd-1) universe
+    | otherwise = countAtribute' atributo (linha+1) (qtd-1) universe
+
+findAtribute :: String -> [String] -> [String] -> Int
+findAtribute _ [] _ = 0
+findAtribute atribute (p:path) universe = do
+    let comeco = findState p universe (p:path)
+    let options = read (universe !! (comeco+2)) :: Int
+    let much = countAtribute atribute (comeco+options+3) universe
+    much + findAtribute atribute path universe
+
+readSpecialState :: String -> [String] -> Int -> [String] -> Int
+readSpecialState state universe index path = do
+    let comeco = findSpecialState state universe index
+    let atributo = nextWord (universe !! (comeco+1)) ' '
+    let qtd = takeOffWord atributo (universe!!(comeco+1))
+    if findAtribute atributo path universe <= read qtd
+        then comeco+2
+        else comeco+3
+
+
+readState :: String -> [String] -> [String] -> IO ()
+readState state universe path = do
+    let comeco = findState state universe path
+    let newPath = path ++ [universe !! comeco]
     limpaTela
     putStr (universe !! (comeco + 1) ++ "\n")
     readOptions universe (comeco+2)
     next <- getLine
-    readState (chooseOption universe (comeco+2) (read next :: Int)) universe
+    readState (chooseOption universe (comeco+2) (read next :: Int)) universe newPath
+
 
 main :: IO ()
 main = do
     file <- readFile "../decisions.txt"
     let linhas = split file
-    readState "tutorial" linhas
+    readState "tutorial" linhas []
