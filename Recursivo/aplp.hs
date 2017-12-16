@@ -1,4 +1,3 @@
-
 nextWord :: String -> Char -> String
 nextWord a sep = nextWord' a [] sep
 
@@ -111,18 +110,30 @@ readSpecialState state universe index path = do
 
 
 readState :: String -> [String] -> [String] -> IO ()
+readState "GAME_OVER" _ _ = putStr "...\n"
 readState state universe path = do
     let comeco = findState state universe path
-    let newPath = path ++ [universe !! comeco]
+    let ultimo = if not (null path) then last path else ""
+
+    let newPath = if universe !! comeco /= ultimo
+           then path ++ [universe !! comeco]
+           else path
+
+    let qtdOptions = read (universe !! (comeco+2))
     limpaTela
     putStr (universe !! (comeco + 1) ++ "\n")
-    readOptions universe (comeco+2)
+    if qtdOptions > 1
+        then readOptions universe (comeco+2)
+        else putStr "\n\n1 - Continuar\n\n"
+
     next <- getLine
-    readState (chooseOption universe (comeco+2) (read next :: Int)) universe newPath
+    if (read next :: Int) > qtdOptions || (read next :: Int) < 1
+        then readState state universe path
+        else readState (chooseOption universe (comeco+2) (read next :: Int)) universe newPath
 
 
 main :: IO ()
 main = do
-    file <- readFile "../decisions.txt"
+    file <- readFile "../decisions"
     let linhas = split file
     readState "tutorial" linhas []

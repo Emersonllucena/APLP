@@ -1,30 +1,30 @@
 tutorial
-~~ Aqui vai um tutorialzinho pra vocÃª se habituar com o estilo do jogo ~~
+~~ Aqui vai um tutorialzinho pra você se habituar com o estilo do jogo ~~
 1
 0 n_importa
 0
 
 0
-Ã‰ aniversÃ¡rio da sua mÃ£e e vocÃª gostaria de dar um animal de estimaÃ§Ã£o para ela. Qual animal de estimaÃ§Ã£o vocÃª irÃ¡ escolher?
+É aniversário da sua mãe e você gostaria de dar um animal de estimação para ela. Qual animal de estimação você irá escolher?
 2
-0.1 Presentear sua mÃ£e com um CÃ£o
-0.2 Presentear sua mÃ£e com um Gato
+0.1 Presentear sua mãe com um Cão
+0.2 Presentear sua mãe com um Gato
 0
 
 0.1
-VocÃª entregou o cÃ£ozinho para a sua mÃ£e e ela adorou.
+Você entregou o cãozinho para a sua mãe e ela adorou.
 1
 0.3 n_importa
 0
 
 0.2
-Nossa! Como vocÃª pÃ´de esquecer que sua mÃ£e Ã© alÃ©rgica a gatos?
+Nossa! Como você pôde esquecer que sua mãe é alérgica a gatos?
 1
 0.3 n_importa
 0
 
 0.3
-Pronto! O jogo Ã© simples assim. Pronto para comeÃ§ar?
+Pronto! O jogo é simples assim. Pronto para começar?
 1
 hora_do_show n_importa
 0
@@ -36,34 +36,34 @@ hora_do_show
 0
 
 1
-OlÃ¡. ApÃ³s algumas semanas como um bom fera do curso de CiÃªncia da ComputaÃ§Ã£o da UFCG, vocÃª jÃ¡ passou por algumas situaÃ§Ãµes bem tÃ­picas de um estudante universitÃ¡rio. No entanto, como todos sabem, a vida Ã© uma caixinha de surpresas e sempre nos reserva situaÃ§Ãµes bobas e inusitadas. Bom, vamos deixar de conversa fiada. Pronto para comeÃ§ar?
+Olá. Após algumas semanas como um bom fera do curso de Ciência da Computação da UFCG, você já passou por algumas situações bem típicas de um estudante universitário. No entanto, como todos sabem, a vida é uma caixinha de surpresas e sempre nos reserva situações bobas e inusitadas. Bom, vamos deixar de conversa fiada. Pronto para começar?
 1
 2 n_importa
 0
 
 2
-SÃ£o 7h. Seu despertador toca e Ã© hora de se levantar para a aula. VocÃª se lembra que de tarde tem aula de cÃ¡lculo. VocÃª estÃ¡ com muito sono, e talvez um pouco de sono a mais seja bom.
+São 7h. Seu despertador toca e é hora de se levantar para a aula. Você se lembra que de tarde tem aula de cálculo. Você está com muito sono, e talvez um pouco de sono a mais seja bom.
 3
 3 Levantar e se arrumar para a aula
-4 Ativar a funÃ§Ã£o soneca e dormir mais
+4 Ativar a função soneca e dormir mais
 5 Desligar o alarme e voltar a dormir
 0
 
 3
-VocÃª se arrumou com calma, tomou cafÃ© e foi de Ã´nibus para a universidade. VocÃª conseguiu chegar pontualmente para a aula.
+Você se arrumou com calma, tomou café e foi de ônibus para a universidade. Você conseguiu chegar pontualmente para a aula.
 1
 6 n_importa
 1
 sono +
 
 4
-VocÃª dorme por mais 15 minutos.
+Você dorme por mais 15 minutos.
 1
 4.5 n_importa
 0
 
 4.5
-VocÃª acorda atrasado para a aula. Se arruma apressado e vai de Ã´nibus para a universidade. Chega atrasado para a aula de IntroduÃ§Ã£o Ã  ComputaÃ§Ã£o e recebe uma bronca do professor. Mas pelo menos estÃ¡ descansado!
+Você acorda atrasado para a aula. Se arruma apressado e vai de ônibus para a universidade. Chega atrasado para a aula de Introdução à Computação e recebe uma bronca do professor. Mas pelo menos está descansado!
 1
 6 n_importa
 2
@@ -71,21 +71,21 @@ sono -
 professor_bravo -
 
 5
-VocÃª falta a aula para dormir mais.
+Você falta a aula para dormir mais.
 1
 9 n_importa
 1
 sono -
 
 6
-Acabam as aulas da manhÃ£. Hora de almoÃ§ar!
+Acabam as aulas da manhã. Hora de almoçar!
 2
 7 Comer na lanchonete do Olavo
-8 AlmoÃ§ar no RU
+8 Almoçar no RU
 0
 
 7
-VocÃª almoÃ§a um sanduÃ­che do Olavo e ainda sobra tempo para estudar para a prova. PorÃ©m sua barriga produz movimentos e barulhos estranhos!
+Você almoça um sanduíche do Olavo e ainda sobra tempo para estudar para a prova. Porém sua barriga produz movimentos e barulhos estranhos!
 1
 12 n_importa
 3
@@ -94,53 +94,53 @@ dinheiro -
 olavo +
 
 8
-VocÃª passa horas na fila do RU. NÃ£o dÃ¡ tempo de estudar para a prova. Pelo menos economizou dinheiro!
+Você passa horas na fila do RU. Não dá tempo de estudar para a prova. Pelo menos economizou dinheiro!
 1
 12 n_importa
 0
 
 9
-De 10h, acorda descansado e estuda para a prova de cÃ¡lculo.
+De 10h, acorda descansado e estuda para a prova de cálculo.
 1
 9.1 n_importa
 1
 nota_calculo +
 
 9.1
-Hora de almoÃ§ar!
+Hora de almoçar!
 2
-10 Fazer um bom almoÃ§o
+10 Fazer um bom almoço
 11 Preparar um miojo para dar tempo de estudar mais
 0
 
 10
-VocÃª almoÃ§a e se sente satisfeito. Em seguida, pega o Ã´nibus para a universidade.
+Você almoça e se sente satisfeito. Em seguida, pega o ônibus para a universidade.
 1
 12 n_importa
 0
 
 11
-VocÃª almoÃ§a rapidamente e usa o restante do tempo para estudar. Em seguida, pega o Ã´nibus para a universidade.
+Você almoça rapidamente e usa o restante do tempo para estudar. Em seguida, pega o ônibus para a universidade.
 1
 12 n_importa
 1
 nota_calculo +
 
 12
-Hora da prova! VocÃª chega ao CAA a tempo e comeÃ§a a fazer a temida prova de cÃ¡lculo.
+Hora da prova! Você chega ao CAA a tempo e começa a fazer a temida prova de cálculo.
 1
 13 n_importa
 0
 
 13
-Ufa! Acabou a prova. Na saÃ­da, vocÃª encontra alguns amigos. Eles te chamam pra sair. Nada mais justo que relaxar depois de uma prova de cÃ¡lculo!
+Ufa! Acabou a prova. Na saída, você encontra alguns amigos. Eles te chamam pra sair. Nada mais justo que relaxar depois de uma prova de cálculo!
 2
 14 Sair com os amigos
 15 Voltar para casa
 0
 
 14
-VocÃªs saem e se divertem. Gastam um pouco, mas valeu a pena. Hora de ir pra casa! VocÃª se sente um pouco cansado.
+Vocês saem e se divertem. Gastam um pouco, mas valeu a pena. Hora de ir pra casa! Você se sente um pouco cansado.
 1
 15 n_importa
 2
@@ -148,20 +148,20 @@ amizade +
 sono +
 
 15
-VocÃª chega em casa, quando surge a dÃºvida: ir pra cama ou estudar um pouco?
+Você chega em casa, quando surge a dúvida: ir pra cama ou estudar um pouco?
 2
 16 Dormir
 17 Estudar
 0
 
 16
-Que dia! VocÃª passa alguns minutos se revirando na cama mas dorme logo em seguida.
+Que dia! Você passa alguns minutos se revirando na cama mas dorme logo em seguida.
 1
 18 n_importa
 0
 
 17
-VocÃª ainda decide estudar algumas horas antes de dormir. Que orgulho!
+Você ainda decide estudar algumas horas antes de dormir. Que orgulho!
 1
 17.1 n_importa
 2
@@ -169,26 +169,26 @@ sono +
 nota_p1 +
 
 17.1
-ApÃ³s o estudo, vocÃª estÃ¡ cansado e dorme instantaneamente.
+Após o estudo, você está cansado e dorme instantaneamente.
 1
 18 n_importa
 0
 
 19
-Seu despertador toca, mas vocÃª estÃ¡ tÃ£o cansado que nem percebe. Exagerou demais ontem! Por conta disso, perdeu a aula da manhÃ£.
+Seu despertador toca, mas você está tão cansado que nem percebe. Exagerou demais ontem! Por conta disso, perdeu a aula da manhã.
 1
 21 n_importa
 0
 
 20
-VocÃª acorda normalmente e vai para a aula. LÃ¡, vocÃª faz uma atividade em grupo e ganha ponto extra! Ainda bem que nÃ£o faltou.
+Você acorda normalmente e vai para a aula. Lá, você faz uma atividade em grupo e ganha ponto extra! Ainda bem que não faltou.
 1
 21 n_importa
 1
 nota_calculo +
 
 21
-VocÃª nÃ£o tem mais obrigaÃ§Ãµes para fazer hoje e entÃ£o vocÃª decide que Ã© hora de fazer algo Ãºtil com seu tempo.
+Você não tem mais obrigações para fazer hoje e então você decide que é hora de fazer algo útil com seu tempo.
 3
 22 Estudar python no tst
 23 Chamar crush para ir no cinema
@@ -196,85 +196,85 @@ VocÃª nÃ£o tem mais obrigaÃ§Ãµes para fazer hoje e entÃ£o vocÃª decide que Ã© ho
 0
 
 22
-VocÃª terminou duas unidades e jÃ¡ faz loops melhor do que uma montanha-russa! Se sente bem confiante para a prÃ³xima prova.
+Você terminou duas unidades e já faz loops melhor do que uma montanha-russa! Se sente bem confiante para a próxima prova.
 1
 24 n_importa
 1
 nota_p1 +
 
 23
-- Errr, hoje nÃ£o vai dar... A amiga do marido da irmÃ£ da minha prima de segundo grau estÃ¡ doente e eu vou lÃ¡ ajudar a cuidar da casa.
+- Errr, hoje não vai dar... A amiga do marido da irmã da minha prima de segundo grau está doente e eu vou lá ajudar a cuidar da casa.
 2
-24 Aceitar a situaÃ§Ã£o e ir jogar um pouco
+24 Aceitar a situação e ir jogar um pouco
 25 Chamar amigos para o cinema
 0
 
 24
-SÃ£o 18:00. VocÃª estava descansando e compartilhando memes quando seu colega de quarto te chamou pra comer a pizza que ele pediu. VocÃªs comem aquela obra de arte com borda recheada enquanto maratonam a nova temporada de Stranger Things.
+São 18:00. Você estava descansando e compartilhando memes quando seu colega de quarto te chamou pra comer a pizza que ele pediu. Vocês comem aquela obra de arte com borda recheada enquanto maratonam a nova temporada de Stranger Things.
 1
 26 n_importa
 0
 
 25
-VocÃªs assistiram Liga da JustiÃ§a, que tinha acabado de estreiar, e passam um bom tempo comentando sobre o quÃ£o do balacobaco foi o filme!
+Vocês assistiram Liga da Justiça, que tinha acabado de estreiar, e passam um bom tempo comentando sobre o quão do balacobaco foi o filme!
 1
 25.1 n_importa
 1
 amizade +
 
 25.1
-EstÃ¡ meio tarde e todo mundo divide um uber pra voltar pra casa.
+Está meio tarde e todo mundo divide um uber pra voltar pra casa.
 1
 26 n_importa
 1
 dinheiro -
 
 26
-VocÃª estÃ¡ tÃ£o cansado que, ao ver sua cama, adormece assim que encosta a cabeÃ§a no travesseiro.
+Você está tão cansado que, ao ver sua cama, adormece assim que encosta a cabeça no travesseiro.
 1
 27 n_importa
 0
 
 27
-VocÃª precisa fazer seu passe escolar para pagar meia passagem no Ã´nibus e sobrar dinheiro pras coxinhas e nÃ£o tem dia melhor pra isso do que hoje.
+Você precisa fazer seu passe escolar para pagar meia passagem no ônibus e sobrar dinheiro pras coxinhas e não tem dia melhor pra isso do que hoje.
 1
 28 n_importa
 0
 
 28
-VocÃª fez o documento sem nenhuma complicaÃ§Ã£o e na volta vocÃª desceu na parada de costume, que fica a 3 ruas da sua casa. Mas dessa vez vocÃª escuta o tÃ­pico som de uma 50tinha e nela avista 2 cavalheiros sem capacete.
+Você fez o documento sem nenhuma complicação e na volta você desceu na parada de costume, que fica a 3 ruas da sua casa. Mas dessa vez você escuta o típico som de uma 50tinha e nela avista 2 cavalheiros sem capacete.
 3
 29 Agir naturalmente
 30 Correr imediatamente pra casa
-31 Se esconder em um estabelecimento prÃ³ximo
+31 Se esconder em um estabelecimento próximo
 0
 
 29
-VocÃª tenta disfarÃ§ar, agindo naturalmente.
+Você tenta disfarçar, agindo naturalmente.
 1
 29.1 n_importa
 0
 
 29.1
-Eles se aproximam com a moto. VocÃª enxerga um deles com uma peixeira na mÃ£o.
+Eles se aproximam com a moto. Você enxerga um deles com uma peixeira na mão.
 1
 29.2 n_importa
 0
 
 29.2
-A moto passa por vocÃª.
+A moto passa por você.
 1
 29.3 n_importa
 0
 
 29.3
-VocÃª sua frio.
+Você sua frio.
 1
 29.4 n_importa
 0
 
 29.4
-VocÃª sente uma mÃ£o no ombro.
+Você sente uma mão no ombro.
 1
 29.5 n_importa
 0
@@ -282,36 +282,36 @@ VocÃª sente uma mÃ£o no ombro.
 29.5
 - Passa tudo! Anda, anda!
 2
-32 VocÃª se rende e entrega tudo
+32 Você se rende e entrega tudo
 33 Reagir
 0
 
 30
-VocÃª se prepara e em uma fraÃ§Ã£o de segundos jÃ¡ estÃ¡ correndo em direÃ§Ã£o ao prÃ©dio.
+Você se prepara e em uma fração de segundos já está correndo em direção ao prédio.
 1
 30.1 n_importa
 0
 
 30.1
-O barulho da 50tinha aumentou, eles estÃ£o te seguindo.
+O barulho da 50tinha aumentou, eles estão te seguindo.
 1
 30.2 n_importa
 0
 
 30.2
-JÃ¡ dÃ¡ pra ver o portÃ£o da frente. Sua mÃ£o jÃ¡ comeÃ§a a procurar a chave nos bolsos.
+Já dá pra ver o portão da frente. Sua mão já começa a procurar a chave nos bolsos.
 1
 30.3 n_importa
 0
 
 30.3
-VocÃª estÃ¡ de frente ao portÃ£o, mas nÃ£o estÃ¡ conseguindo achar a chave certa!
+Você está de frente ao portão, mas não está conseguindo achar a chave certa!
 1
 30.4 n_importa
 0
 
 30.4
-A chave entrou, mas nÃ£o estÃ¡ girando! Eles estÃ£o chegando e a rua estÃ¡ vazia!
+A chave entrou, mas não está girando! Eles estão chegando e a rua está vazia!
 1
 30.5 n_importa
 0
@@ -323,74 +323,75 @@ A chave entrou, mas nÃ£o estÃ¡ girando! Eles estÃ£o chegando e a rua estÃ¡ vazia
 0
 
 30.6
-O porteiro percebeu a tempo e abriu o portÃ£o. VocÃª entra e o fecha, ofegante.
+O porteiro percebeu a tempo e abriu o portão. Você entra e o fecha, ofegante.
 1
 30.7 n_importa
 0
 
 30.7
-Essa foi por pouco, vocÃª passa o resto do dia descansando e tentando nÃ£o lembrar disso.
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
 1
 34 n_importa
 0
 
 31
-Os sujeitos passam mais de 10 minutos esperando vocÃª sair, mas acabam desistindo e vÃ£o embora.
+Os sujeitos passam mais de 10 minutos esperando você sair, mas acabam desistindo e vão embora.
 1
 31.1 n_importa
 0
 
 31.1
-VocÃª vai pra casa cautelosamente, olhando para todos os lados como um esquizofrÃªnico.
+Você vai pra casa cautelosamente, olhando para todos os lados como um esquizofrênico.
 1
 31.2 n_importa
 0
 
 31.2
-Essa foi por pouco, vocÃª passa o resto do dia descansando e tentando nÃ£o lembrar disso.
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
 1
 34 n_importa
 0
 
 32
-VocÃª entrega seu celular, relÃ³gio e dinheiro. Volta triste para casa. Mas hey, ainda estÃ¡ vivo!
+Você entrega seu celular, relógio e dinheiro. Volta triste para casa. Mas hey, ainda está vivo!
 1
 34 n_importa
 1
 dinheiro -
 
 33
-VocÃª pega ele pelo braÃ§o e gira.
+Você pega ele pelo braço e gira.
 1
 33.1 n_importa
-0
+1
+reagiu +
 
 33.1
-O meliante levanta o joelho e vai atingir seu estÃ´mago.
+O meliante levanta o joelho e vai atingir seu estômago.
 1
 33.2 n_importa
 0
 
 33.2
-VocÃª desvia e o subjulga, torcendo o braÃ§o dele para trÃ¡s.
+Você desvia e o subjulga, torcendo o braço dele para trás.
 1
 33.3 n_importa
 0
 
 33.3
-VocÃª se sente poderoso e justiceiro ameaÃ§ando quebrar o braÃ§o do assaltante.
+Você se sente poderoso e justiceiro ameaçando quebrar o braço do assaltante.
 1
 33.4 n_importa
 0
 
 33.4
-Mas... onde estÃ¡ o outro!?
+Mas... onde está o outro!?
 1
 33.5 n_importa
 0
 
 33.5
-O outro meliante te esfaqueia por trÃ¡s.
+O outro meliante te esfaqueia por trás.
 1
 33.6 n_importa
 0
@@ -403,25 +404,25 @@ Pegam suas coisas e saem correndo.
 dinheiro -
 
 33.7
-AlguÃ©m te vÃª no chÃ£o sangrando e ligam para o 192.
+Alguém te vê no chão sangrando e ligam para o 192.
 1
 33.8 n_importa
 0
 
 33.8
-VocÃª percebe vagamente que estÃ¡ entrando em uma ambulÃ¢ncia.
+Você percebe vagamente que está entrando em uma ambulância.
 1
 33.9 n_importa
 0
 
 33.9
-VocÃª nÃ£o percebe mais nada.
+Você não percebe mais nada.
 1
 33.10 n_importa
 0
 
 33.10
-VocÃª morreu.
+Você morreu.
 1
 33.11 n_importa
 0
@@ -429,30 +430,30 @@ VocÃª morreu.
 33.11
 Nunca reaja a assaltos.
 1
-FIM n_importa
+FIM_REAGIU n_importa
 0
 
 34
-VocÃª acorda cedo. Ã‰ domingo. VocÃª estÃ¡ sem nada para fazer, quando recebe uma mensagem dos amigos. Um churrasco da turma!
+Você acorda cedo. É domingo. Você está sem nada para fazer, quando recebe uma mensagem dos amigos. Um churrasco da turma!
 1
 34.1 n_importa
 0
 
 34.2
-Como vocÃª estÃ¡ mais liso que quiabo, nÃ£o tem dinheiro para ir para o churrasco. NÃ£o tem escolha senÃ£o ficar estudando. Que domingo!
+Como você está mais liso que quiabo, não tem dinheiro para ir para o churrasco. Não tem escolha senão ficar estudando. Que domingo!
 1
 36 n_importa
 0
 
 34.3
-VocÃª economizou um pouco nos Ãºltimos dias, portanto pode se dar ao luxo de sair hoje.
+Você economizou um pouco nos últimos dias, portanto pode se dar ao luxo de sair hoje.
 2
 35 Sair com os amigos
 36 Ficar em casa e estudar
 0
 
 35
-VocÃª passa o dia no churrasco com os amigos e se diverte bastante. Chega em casa de noite, cansado demais para estudar. Melhor ir dormir!
+Você passa o dia no churrasco com os amigos e se diverte bastante. Chega em casa de noite, cansado demais para estudar. Melhor ir dormir!
 1
 37 n_importa
 2
@@ -460,59 +461,60 @@ dinheiro -
 amizade +
 
 36
-VocÃª passa o domingo estudando para P1, parando algumas vezes para jogar. NinguÃ©m Ã© de ferro! Depois de um dia produtivo, vocÃª vai dormir.
+Você passa o domingo estudando para P1, parando algumas vezes para jogar. Ninguém é de ferro! Depois de um dia produtivo, você vai dormir.
 1
 37 n_importa
 1
 nota_p1 +
 
 37
-VocÃª acorda na hora, se arruma e vai para a UFCG. Dessa vez, com cuidado redobrado!
+Você acorda na hora, se arruma e vai para a UFCG. Dessa vez, com cuidado redobrado!
 1
 37.1 n_importa
 0
 
 37.1
-Chegando na aula, vocÃª recebe a nota da prova de IntroduÃ§Ã£o Ã  ComputaÃ§Ã£o. Seis!! VocÃª tem certeza que acertou a Ãºltima questÃ£o.
+Chegando na aula, você recebe a nota da prova de Introdução à Computação. Seis!! Você tem certeza que acertou a última questão.
 2
-38 Pedir recorreÃ§Ã£o da Ãºltima questÃ£o
-41 Deixar isso pra lÃ¡
+38 Pedir recorreção da última questão
+41 Deixar isso pra lá
 0
 
 39
-VocÃª vai falar com o professor. Ele analisa a prova cuidadosamente e reconhece o erro na correÃ§Ã£o. Isso quer dizer que vocÃª tirou 8!!
+Você vai falar com o professor. Ele analisa a prova cuidadosamente e reconhece o erro na correção. Isso quer dizer que você tirou 8!!
 1
 41 n_importa
-0
+1
+prova_ic +
 
 40
-VocÃª vai falar com o professor, mas ele se lembra do seu rosto. 'VocÃª chega atrasado em todas as minhas aulas!', ele reclama. Depois de um longo sermÃ£o, ele 'recorrige' a Ãºltima questÃ£o, mas nÃ£o encontra erro algum na correÃ§Ã£o. Que estranho!
+Você vai falar com o professor, mas ele se lembra do seu rosto. 'Você chega atrasado em todas as minhas aulas!', ele reclama. Depois de um longo sermão, ele 'recorrige' a última questão, mas não encontra erro algum na correção. Que estranho!
 1
 41 n_importa
 0
 
 41
-SÃ£o 12h em ponto e, devido o calor, sua cabeÃ§a jÃ¡ nÃ£o funciona normalmente. Ã‰ possÃ­vel ouvir o som do apocalipse em sua barriga. Como estudante de computaÃ§Ã£o, vocÃª consegue prever que almoÃ§arÃ¡ Ã s 13h caso enfrente a fila do R.U. Mas onde hÃ¡ olavÃ£o, hÃ¡ esperanÃ§a
+São 12h em ponto e, devido o calor, sua cabeça já não funciona normalmente. É possível ouvir o som do apocalipse em sua barriga. Como estudante de computação, você consegue prever que almoçará às 13h caso enfrente a fila do R.U. Mas onde há olavão, há esperança
 2
 42 Comer no R.U.
-43 Comer um Big OlavÃ£o para acalmar o caos na sua barriga
+43 Comer um Big Olavão para acalmar o caos na sua barriga
 0
 
 42
-VocÃª estÃ¡ na cauda da fila, mas por sorte hÃ¡ uma pessoa muito atraente na sua frente. VocÃªs trocam alguns olhares e vocÃª decide comentar a satisfaÃ§Ã£o de nÃ£o ser um fura fila.
+Você está na cauda da fila, mas por sorte há uma pessoa muito atraente na sua frente. Vocês trocam alguns olhares e você decide comentar a satisfação de não ser um fura fila.
 1
 42.1 n_importa
 1
 amorzinho +
 
 42.1
-Ela diz que sente o mesmo e um diÃ¡logo muito agradÃ¡vel se desenrola. Talvez ela seja o ponto e vÃ­rgula que faltava para sua vida compilar.
+Ela diz que sente o mesmo e um diálogo muito agradável se desenrola. Talvez ela seja o ponto e vírgula que faltava para sua vida compilar.
 1
 44 n_importa
 0
 
 43
-VocÃª degusta seu Big OlavÃ£o acompanhado de um delicioso suco de maracujÃ¡ envelhecido por 7 dias em uma garrafa PET. Sua barriga para de fazer barulho, mas surge um intenso enjoo.
+Você degusta seu Big Olavão acompanhado de um delicioso suco de maracujá envelhecido por 7 dias em uma garrafa PET. Sua barriga para de fazer barulho, mas surge um intenso enjoo.
 1
 44 n_importa
 2
@@ -520,49 +522,50 @@ dinheiro -
 olavo +
 
 44
-Hora do Ãºltimo miniteste de P1. VocÃª se dirige ao LCC2, senta-se confortavelmente e em seguida comeÃ§a a resolver. VocÃª precisa fazer 3 questÃµes para passar de unidade.
+Hora do último miniteste de P1. Você se dirige ao LCC2, senta-se confortavelmente e em seguida começa a resolver. Você precisa fazer 3 questões para passar de unidade.
 1
 45 n_importa
 0
 
 46
-VocÃª conseguiu fazer duas questÃµes, mas continua na mesma unidade
+Você conseguiu fazer duas questões, mas continua na mesma unidade
 1
 46.1 n_importa
 0
 
 46.1
-A terceira quase foi, mas vocÃª estava nervoso e nÃ£o conseguiu encontrar o que causou o .....F
+A terceira quase foi, mas você estava nervoso e não conseguiu encontrar o que causou o .....F
 1
 47 n_importa
 0
 
 46.2
-ParabÃ©ns! VocÃª treinou muito e terminou P1. Agora Ã© visto como um mago pelos feras que estÃ£o presos na unidade 4.
+Parabéns! Você treinou muito e terminou P1. Agora é visto como um mago pelos feras que estão presos na unidade 4.
 1
 47 n_importa
-0
+1
+terminou_p1 +
 
 48
-Ao chegar em casa e conectar-se ao wifi do vizinho, vocÃª recebe duas mensagens no whatsapp
+Ao chegar em casa e conectar-se ao wifi do vizinho, você recebe duas mensagens no whatsapp
 1
 48.1 n_importa
 0
 
 48.1
-"oi, desculpa nao ter ido quando vc me chamou... tava muito ocupada. Vamos hj" - Mina gata que faz um ano que sÃ³ te dÃ¡ bolo
+"oi, desculpa nao ter ido quando vc me chamou... tava muito ocupada. Vamos hj" - Mina gata que faz um ano que só te dá bolo
 1
 48.2 n_importa
 0
 
 48.2
-"Adorei conversar com vc no R.U.... Pensei que a gente podia sair pra o cinema hoje..." - O ponto e vÃ­rgula do RU
+"Adorei conversar com vc no R.U.... Pensei que a gente podia sair pra o cinema hoje..." - O ponto e vírgula do RU
 1
 48.3 n_importa
 0
 
 48.3
-Lembre se que seus amigos estÃ£o zombando que vocÃª joga mal no computador...
+Lembre se que seus amigos estão zombando que você joga mal no computador...
 3
 50 Sair com a mina gata
 52 Sair com instant crush do R.U.
@@ -576,57 +579,57 @@ Mensagem no whatsapp...
 0
 
 49.1
-"oi, desculpa nao ter ido ver liga da justiÃ§a quando vc me chamou... tava muito ocupada. Vamos hoje" - Mina gata que faz um ano que sÃ³ te dÃ¡ bolo
+"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hoje" - Mina gata que faz um ano que só te dá bolo
 2
 50 Aceita o convite
 51 Fica em casa jogando
 0
 
 50
-"Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei hahaha" - Essas sÃ£o apenas algumas das frases que ela falou durante o filme. Ela nÃ£o parava de falar.
+"Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei hahaha" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
 1
 50.1 n_importa
 0
 
 50.1
-Sendo cavalheiro, vocÃª pagou os ingressos e o jantar depois do filme...
+Sendo cavalheiro, você pagou os ingressos e o jantar depois do filme...
 1
 50.2 n_importa
 0
 
 50.2
-"Obrigada por tudo, mas vocÃª Ã© como um irmÃ£o pra mim!" - Isso foi o que ela disse quando vocÃª tentou beijÃ¡-la
+"Obrigada por tudo, mas você é como um irmão pra mim!" - Isso foi o que ela disse quando você tentou beijá-la
 1
 53 n_importa
 0
 
 51
-Parece que Ã© sÃ³ isso que vocÃª sabe fazer direito, jogar, jogar e jogar.
+Parece que é só isso que você sabe fazer direito, jogar, jogar e jogar.
 1
 53 n_importa
 0
 
 52
-O filme foi Ã³timo. Ela pegou na sua mÃ£o no final do filme e vocÃªs curtiram os crÃ©ditos muito prÃ³ximos um do outro
+O filme foi ótimo. Ela pegou na sua mão no final do filme e vocês curtiram os créditos muito próximos um do outro
 1
 52.1 n_importa
 1
 amorzinho +
 
 52.1
-Mais prÃ³ximos do que seria normal para dois seres humanos que nÃ£o quisessem se beijar
+Mais próximos do que seria normal para dois seres humanos que não quisessem se beijar
 1
 52.2 n_importa
 0
 
 52.2
-Ao ir para a garagem, vocÃª reuniu toda sua coragem e arriscou um beijo...
+Ao ir para a garagem, você reuniu toda sua coragem e arriscou um beijo...
 1
 52.3 n_importa
 0
 
 52.3
-VocÃªs ficaram por horas e marcaram outro encontro, mas sem data definida.
+Vocês ficaram por horas e marcaram outro encontro, mas sem data definida.
 1
 53 n_importa
 0
@@ -638,87 +641,202 @@ VocÃªs ficaram por horas e marcaram outro encontro, mas sem data definida.
 0
 
 54
-VocÃª acorda normalmente, toma um cafÃ© da manhÃ£ bem reforÃ§ado pra sobreviver a mais um dia de fim de perÃ­odo.
+Você acorda normalmente, toma um café da manhã bem reforçado pra sobreviver a mais um dia de fim de período.
 1
 55 n_importa
 0
 
 56
-Como vocÃª estÃ¡ sendo um bom amigo, durante a aula seus amigos te chamam para ir no espetinho no fim do dia pra desopilar.
+Como você está sendo um bom amigo, durante a aula seus amigos te chamam para ir no espetinho no fim do dia pra desopilar.
 1
 57 n_importa
 1
 amizade +
 
 57
-ApÃ³s a aula, deu a hora do almoÃ§o e bateu aquela dÃºvida de sempre...
+Após a aula, deu a hora do almoço e bateu aquela dúvida de sempre...
 2
 58 Comer no RU
-59 AlmoÃ§ar no OlavÃ£o
+59 Almoçar no Olavão
 0
 
 59.1
-VocÃª come aquele x-burguer basicÃ£o. Sente algo esquisito no seu estÃ´mago, mas nada sÃ©rio e logo passa.
+Você come aquele x-burguer basicão. Sente algo esquisito no seu estômago, mas nada sério e logo passa.
 1
 62 n_importa
 1
 olavo +
 
 59.2
-VocÃª come aquele x-burguer basicÃ£o.
+Você come aquele x-burguer basicão.
 1
 59.3 n_importa
 1
 olavo +
 
 59.3
-Algo parece estranho no seu estÃ´mago, vocÃª pede um suco pra tentar acalmÃ¡-lo.
+Algo parece estranho no seu estômago, você pede um suco pra tentar acalmá-lo.
 1
 59.4 n_importa
 0
 
 59.4
-VocÃª sente sua consciÃªncia se esvaindo e cai no chÃ£o.
+Você sente sua consciência se esvaindo e cai no chão.
 1
 59.5 n_importa
 0
 
 59.5
-Pessoas tentam se aproximar e prestar socorro, mas vocÃª sÃ³ consegue pensar no quÃ£o saborosa aparenta ser a carne humana.
+Pessoas tentam se aproximar e prestar socorro, mas você só consegue pensar no quão saborosa aparenta ser a carne humana.
 1
 59.6 n_importa
 0
 
 59.6
-VocÃª virou um mutante e agora vive no laguinho junto daqueles que tiveram o mesmo fim que vocÃª.
+Você virou um mutante e agora vive no laguinho junto daqueles que tiveram o mesmo fim que você.
 1
 59.7 n_importa
 0
 
 59.7
-Cuide da sua alimentaÃ§Ã£o.
+Cuide da sua alimentação.
 1
-FIM n_importa
+FIM_MUTANTE n_importa
 0
 
 60
-VocÃª encontra novamente aquela que jÃ¡ virou o main() do seu programa e conversam atÃ© a hora da aula de cÃ¡lculo. VocÃªs marcam de sair nesse final de semana e voce gosta cada vez mais dela.
+Você encontra novamente aquela que já virou o main() do seu programa e conversam até a hora da aula de cálculo. Vocês marcam de sair nesse final de semana e voce gosta cada vez mais dela.
 1
 62 n_importa
 1
 amorzinho +
 
 61
-VocÃª almoÃ§a normalmente e vai pra aula de cÃ¡lculo.
+Você almoça normalmente e vai pra aula de cálculo.
 1
 62 n_importa
 0
 
 62
-VocÃª chega na aula de cÃ¡lculo. O professor corrigiu sua nota! VocÃª se levanta para ver e...
+Você chega na aula de cálculo. O professor corrigiu sua nota! Você se levanta para ver e...
 1
-FIM aaaa
+FIM n_importa
 0
+
+FIM_REAGIU
+Você morreu porque tentou ser corajoso demais. Lembre-se: você é apenas um estudante de computação.
+1
+resultados n_importa
+0
+
+FIM_MUTANTE
+Você não manteve hábitos muito saudáveis. Eu sei, é apenas um estudante... mas se cuide na próxima!
+1
+resultados n_importa
+0
+
+calculo_rec
+Que droga, você foi mal na prova. Da próxima vez estude mais!
+1
+calculo_rec.1 n_importa
+0
+
+calculo_rec.1
+Você vai precisar fazer prova final.
+1
+resultados n_importa
+0
+
+calculo_aprovado
+Você passou por média!
+1
+resultados n_importa
+0
+
+resultados
+Fim de periodo! O que voce conseguiu? Vamos ver:
+1
+notac1 n_importa
+0
+
+c1_nota6
+6 em cálculo!
+1
+notaic n_importa
+0
+
+c1_nota7
+7 em cálculo! Podia ser melhor... mas podia ser pior.
+1
+notaic n_importa
+0
+
+c1_nota8
+8 em cálculo! O esforço valeu a pena!
+1
+notaic n_importa
+0
+
+c1_nota9
+9 em cálculo I!! Você é o mito dessa matéria, o professor com certeza lembrará de você.
+1
+notaic n_importa
+0
+
+ic_nota6
+6 em Introdução à Computação. Tenho certeza que se você chegasse pontualmente ele perceberia que corrigiu errado sua prova.
+1
+notap1 n_importa
+0
+
+ic_nota8
+8 em Introdução à Computação. Ainda bem que ele recorrigiu!
+1
+notap1 n_importa
+0
+
+p1_incompleto
+Você não terminou todas as unidades de P1. Os conceitos são importantes, corra atrás do que perdeu.
+1
+total_amizade n_importa
+0
+
+p1_completo
+Você terminou todas as unidades de P1!
+1
+total_amizade n_importa
+0
+
+poucos_amigos
+Você saiu pouco com sua turma e, por isso, passou as férias um pouco sozinho. Seja mais sociável!
+1
+total_amor n_importa
+0
+
+muitos_amigos
+Você foi um bom amigo durante o período e é querido por todos da sua turma!
+1
+total_amor n_importa
+0
+
+sem_namorada
+Acaba o período e você não arranja uma namorada! Paciência...
+1
+tela_final
+0
+
+com_namorada
+Nas próximas semanas você e seu crush ficam cada vez mais próximos. Tudo indica que vai dar namoro!
+1
+tela_final
+0
+
+tela_final
+Fim do jogo! Será que poderia ter ido melhor?
+1
+GAME_OVER
+0
+
 
 END
 
@@ -761,5 +879,45 @@ amorzinho 1
 olavo 1
 59.1
 59.2
+
+FIM
+nota_calculo 0
+calculo_rec
+calculo_aprovado
+
+notac1
+nota_calculo 0
+c1_nota6
+notac1.2
+
+notac1.2
+nota_calculo 1
+c1_nota7
+notac1.3
+
+notac1.3
+nota_calculo 2
+c1_nota8
+c1_nota9
+
+notaic
+prova_ic 0
+ic_nota6
+ic_nota8
+
+notap1
+terminou_p1 0
+p1_incompleto
+p1_completo
+
+total_amizade
+amizade 2
+poucos_amigos
+muitos_amigos
+
+total_amor
+amorzinho 2
+sem_namorada
+com_namorada
 
 END
