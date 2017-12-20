@@ -1,3 +1,5 @@
+import Text.Read
+
 nextWord :: String -> Char -> String
 nextWord a sep = nextWord' a [] sep
 
@@ -108,9 +110,12 @@ readSpecialState state universe index path = do
         then comeco+2
         else comeco+3
 
+getValue :: Maybe Int -> Int
+getValue Nothing = 0
+getValue (Just a) = a
 
 readState :: String -> [String] -> [String] -> IO ()
-readState "GAME_OVER" _ _ = putStr "...\n"
+readState "GAME_OVER" _ _ = main
 readState state universe path = do
     let comeco = findState state universe path
     let ultimo = if not (null path) then last path else ""
@@ -127,13 +132,55 @@ readState state universe path = do
         else putStr "\n\n1 - Continuar\n\n"
 
     next <- getLine
-    if (read next :: Int) > qtdOptions || (read next :: Int) < 1
+    let value = getValue (readMaybe next :: Maybe Int)
+
+    if value > qtdOptions || value < 1
         then readState state universe path
-        else readState (chooseOption universe (comeco+2) (read next :: Int)) universe newPath
+        else readState (chooseOption universe (comeco+2) value) universe newPath
 
 
-main :: IO ()
-main = do
+playGame :: IO ()
+playGame = do
     file <- readFile "../decisions"
     let linhas = split file
     readState "tutorial" linhas []
+
+showCredits :: IO ()
+showCredits = do
+    limpaTela
+    putStrLn " ----------------------------------------- "
+    putStrLn "| Universidade Federal de Campina Grande  |"
+    putStrLn "| Departamento de Sistemas e Computação   |"
+    putStrLn " ----------------------------------------- "
+    putStrLn "| Paradigmas de Linguagens de Programação |"
+    putStrLn " ----------------------------------------- "
+    putStrLn "| Professor:                              |"
+    putStrLn "| -- Everton Leandro                      |"
+    putStrLn " ----------------------------------------- "
+    putStrLn "| Time de Desenvolvimento:                |"
+    putStrLn "| -- Daniel Mitre                         |"
+    putStrLn "| -- Emerson Lucena                       |"
+    putStrLn "| -- Gustavo Ribeiro                      |"
+    putStrLn "| -- Rafael Guerra                        |"
+    putStrLn "| -- Rerisson Matos                       |"
+    putStrLn " ----------------------------------------- "
+    main
+
+main :: IO ()
+main = do
+    putStr "\n\n\n\n"
+    putStrLn " -------------------------------- "
+    putStrLn "|         Menu Principal         |"
+    putStrLn " -------------------------------- "
+    putStrLn "| 1 - Jogar                      |"
+    putStrLn "| 2 - Créditos                   |"
+    putStrLn "| 3 - Sair                       |"
+    putStrLn " -------------------------------- "
+
+    next <- getLine
+    let value = getValue (readMaybe next :: Maybe Int)
+    case value of
+        1 -> playGame
+        2 -> showCredits
+        3 -> putStrLn "Obrigado por jogar :D"
+        _ -> main
