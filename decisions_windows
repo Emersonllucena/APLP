@@ -1,0 +1,923 @@
+tutorial
+~~ Aqui vai um tutorialzinho pra você se habituar com o estilo do jogo ~~
+1
+0 n_importa
+0
+
+0
+É aniversário da sua mãe e você gostaria de dar um animal de estimação para ela. Qual animal de estimação você irá escolher?
+2
+0.1 Presentear sua mãe com um Cão
+0.2 Presentear sua mãe com um Gato
+0
+
+0.1
+Você entregou o cãozinho para a sua mãe e ela adorou.
+1
+0.3 n_importa
+0
+
+0.2
+Nossa! Como você pôde esquecer que sua mãe é alérgica a gatos?
+1
+0.3 n_importa
+0
+
+0.3
+Pronto! O jogo é simples assim. Pronto para começar?
+1
+hora_do_show n_importa
+0
+
+hora_do_show
+~~~~~~~~~~~~~~ Hora do show!!! ~~~~~~~~~~~~~~
+1
+1 n_importa
+0
+
+1
+Olá. Após algumas semanas como um bom fera do curso de Ciência da Computação da UFCG, você já passou por algumas situações bem típicas de um estudante universitário. No entanto, como todos sabem, a vida é uma caixinha de surpresas e sempre nos reserva situações bobas e inusitadas. Bom, vamos deixar de conversa fiada. Pronto para começar?
+1
+2 n_importa
+0
+
+2
+São 7h. Seu despertador toca e é hora de se levantar para a aula. Você se lembra que de tarde tem aula de cálculo. Você está com muito sono, e talvez um pouco de sono a mais seja bom.
+3
+3 Levantar e se arrumar para a aula
+4 Ativar a função soneca e dormir mais
+5 Desligar o alarme e voltar a dormir
+0
+
+3
+Você se arrumou com calma, tomou café e foi de ônibus para a universidade. Você conseguiu chegar pontualmente para a aula.
+1
+6 n_importa
+1
+sono +
+
+4
+Você dorme por mais 15 minutos.
+1
+4.5 n_importa
+0
+
+4.5
+Você acorda atrasado para a aula. Se arruma apressado e vai de ônibus para a universidade. Chega atrasado para a aula de Introdução à Computação e recebe uma bronca do professor. Mas pelo menos está descansado!
+1
+6 n_importa
+2
+sono -
+professor_bravo -
+
+5
+Você falta a aula para dormir mais.
+1
+9 n_importa
+1
+sono -
+
+6
+Acabam as aulas da manhã. Hora de almoçar!
+2
+7 Comer na lanchonete do Olavo
+8 Almoçar no RU
+0
+
+7
+Você almoça um sanduíche do Olavo e ainda sobra tempo para estudar para a prova. Porém sua barriga produz movimentos e barulhos estranhos!
+1
+12 n_importa
+3
+nota_calculo +
+dinheiro -
+olavo +
+
+8
+Você passa horas na fila do RU. Não dá tempo de estudar para a prova. Pelo menos economizou dinheiro!
+1
+12 n_importa
+0
+
+9
+De 10h, acorda descansado e estuda para a prova de cálculo.
+1
+9.1 n_importa
+1
+nota_calculo +
+
+9.1
+Hora de almoçar!
+2
+10 Fazer um bom almoço
+11 Preparar um miojo para dar tempo de estudar mais
+0
+
+10
+Você almoça e se sente satisfeito. Em seguida, pega o ônibus para a universidade.
+1
+12 n_importa
+0
+
+11
+Você almoça rapidamente e usa o restante do tempo para estudar. Em seguida, pega o ônibus para a universidade.
+1
+12 n_importa
+1
+nota_calculo +
+
+12
+Hora da prova! Você chega ao CAA a tempo e começa a fazer a temida prova de cálculo.
+1
+13 n_importa
+0
+
+13
+Ufa! Acabou a prova. Na saída, você encontra alguns amigos. Eles te chamam pra sair. Nada mais justo que relaxar depois de uma prova de cálculo!
+2
+14 Sair com os amigos
+15 Voltar para casa
+0
+
+14
+Vocês saem e se divertem. Gastam um pouco, mas valeu a pena. Hora de ir pra casa! Você se sente um pouco cansado.
+1
+15 n_importa
+2
+amizade +
+sono +
+
+15
+Você chega em casa, quando surge a dúvida: ir pra cama ou estudar um pouco?
+2
+16 Dormir
+17 Estudar
+0
+
+16
+Que dia! Você passa alguns minutos se revirando na cama mas dorme logo em seguida.
+1
+18 n_importa
+0
+
+17
+Você ainda decide estudar algumas horas antes de dormir. Que orgulho!
+1
+17.1 n_importa
+2
+sono +
+nota_p1 +
+
+17.1
+Após o estudo, você está cansado e dorme instantaneamente.
+1
+18 n_importa
+0
+
+19
+Seu despertador toca, mas você está tão cansado que nem percebe. Exagerou demais ontem! Por conta disso, perdeu a aula da manhã.
+1
+21 n_importa
+0
+
+20
+Você acorda normalmente e vai para a aula. Lá, você faz uma atividade em grupo e ganha ponto extra! Ainda bem que não faltou.
+1
+21 n_importa
+1
+nota_calculo +
+
+21
+Você não tem mais obrigações para fazer hoje e então você decide que é hora de fazer algo útil com seu tempo.
+3
+22 Estudar python no tst
+23 Chamar crush para ir no cinema
+25 Chamar amigos para ir no cinema
+0
+
+22
+Você terminou duas unidades e já faz loops melhor do que uma montanha-russa! Se sente bem confiante para a próxima prova.
+1
+24 n_importa
+1
+nota_p1 +
+
+23
+- Errr, hoje não vai dar... A amiga do marido da irmã da minha prima de segundo grau está doente e eu vou lá ajudar a cuidar da casa.
+2
+24 Aceitar a situação e ir jogar um pouco
+25 Chamar amigos para o cinema
+0
+
+24
+São 18:00. Você estava descansando e compartilhando memes quando seu colega de quarto te chamou pra comer a pizza que ele pediu. Vocês comem aquela obra de arte com borda recheada enquanto maratonam a nova temporada de Stranger Things.
+1
+26 n_importa
+0
+
+25
+Vocês assistiram Liga da Justiça, que tinha acabado de estreiar, e passam um bom tempo comentando sobre o quão do balacobaco foi o filme!
+1
+25.1 n_importa
+1
+amizade +
+
+25.1
+Está meio tarde e todo mundo divide um uber pra voltar pra casa.
+1
+26 n_importa
+1
+dinheiro -
+
+26
+Você está tão cansado que, ao ver sua cama, adormece assim que encosta a cabeça no travesseiro.
+1
+27 n_importa
+0
+
+27
+Você precisa fazer seu passe escolar para pagar meia passagem no ônibus e sobrar dinheiro pras coxinhas e não tem dia melhor pra isso do que hoje.
+1
+28 n_importa
+0
+
+28
+Você fez o documento sem nenhuma complicação e na volta você desceu na parada de costume, que fica a 3 ruas da sua casa. Mas dessa vez você escuta o típico som de uma 50tinha e nela avista 2 cavalheiros sem capacete.
+3
+29 Agir naturalmente
+30 Correr imediatamente pra casa
+31 Se esconder em um estabelecimento próximo
+0
+
+29
+Você tenta disfarçar, agindo naturalmente.
+1
+29.1 n_importa
+0
+
+29.1
+Eles se aproximam com a moto. Você enxerga um deles com uma peixeira na mão.
+1
+29.2 n_importa
+0
+
+29.2
+A moto passa por você.
+1
+29.3 n_importa
+0
+
+29.3
+Você sua frio.
+1
+29.4 n_importa
+0
+
+29.4
+Você sente uma mão no ombro.
+1
+29.5 n_importa
+0
+
+29.5
+- Passa tudo! Anda, anda!
+2
+32 Você se rende e entrega tudo
+33 Reagir
+0
+
+30
+Você se prepara e em uma fração de segundos já está correndo em direção ao prédio.
+1
+30.1 n_importa
+0
+
+30.1
+O barulho da 50tinha aumentou, eles estão te seguindo.
+1
+30.2 n_importa
+0
+
+30.2
+Já dá pra ver o portão da frente. Sua mão já começa a procurar a chave nos bolsos.
+1
+30.3 n_importa
+0
+
+30.3
+Você está de frente ao portão, mas não está conseguindo achar a chave certa!
+1
+30.4 n_importa
+0
+
+30.4
+A chave entrou, mas não está girando! Eles estão chegando e a rua está vazia!
+1
+30.5 n_importa
+0
+
+30.5
+*Cleck!*
+1
+30.6 n_importa
+0
+
+30.6
+O porteiro percebeu a tempo e abriu o portão. Você entra e o fecha, ofegante.
+1
+30.7 n_importa
+0
+
+30.7
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
+1
+34 n_importa
+0
+
+31
+Os sujeitos passam mais de 10 minutos esperando você sair, mas acabam desistindo e vão embora.
+1
+31.1 n_importa
+0
+
+31.1
+Você vai pra casa cautelosamente, olhando para todos os lados como um esquizofrênico.
+1
+31.2 n_importa
+0
+
+31.2
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
+1
+34 n_importa
+0
+
+32
+Você entrega seu celular, relógio e dinheiro. Volta triste para casa. Mas hey, ainda está vivo!
+1
+34 n_importa
+1
+dinheiro -
+
+33
+Você pega ele pelo braço e gira.
+1
+33.1 n_importa
+1
+reagiu +
+
+33.1
+O meliante levanta o joelho e vai atingir seu estômago.
+1
+33.2 n_importa
+0
+
+33.2
+Você desvia e o subjulga, torcendo o braço dele para trás.
+1
+33.3 n_importa
+0
+
+33.3
+Você se sente poderoso e justiceiro ameaçando quebrar o braço do assaltante.
+1
+33.4 n_importa
+0
+
+33.4
+Mas... onde está o outro!?
+1
+33.5 n_importa
+0
+
+33.5
+O outro meliante te esfaqueia por trás.
+1
+33.6 n_importa
+0
+
+33.6
+Pegam suas coisas e saem correndo.
+1
+33.7 n_importa
+1
+dinheiro -
+
+33.7
+Alguém te vê no chão sangrando e ligam para o 192.
+1
+33.8 n_importa
+0
+
+33.8
+Você percebe vagamente que está entrando em uma ambulância.
+1
+33.9 n_importa
+0
+
+33.9
+Você não percebe mais nada.
+1
+33.10 n_importa
+0
+
+33.10
+Você morreu.
+1
+33.11 n_importa
+0
+
+33.11
+Nunca reaja a assaltos.
+1
+FIM_REAGIU n_importa
+0
+
+34
+Você acorda cedo. É domingo. Você está sem nada para fazer, quando recebe uma mensagem dos amigos. Um churrasco da turma!
+1
+34.1 n_importa
+0
+
+34.2
+Como você está mais liso que quiabo, não tem dinheiro para ir para o churrasco. Não tem escolha senão ficar estudando. Que domingo!
+1
+36 n_importa
+0
+
+34.3
+Você economizou um pouco nos últimos dias, portanto pode se dar ao luxo de sair hoje.
+2
+35 Sair com os amigos
+36 Ficar em casa e estudar
+0
+
+35
+Você passa o dia no churrasco com os amigos e se diverte bastante. Chega em casa de noite, cansado demais para estudar. Melhor ir dormir!
+1
+37 n_importa
+2
+dinheiro -
+amizade +
+
+36
+Você passa o domingo estudando para P1, parando algumas vezes para jogar. Ninguém é de ferro! Depois de um dia produtivo, você vai dormir.
+1
+37 n_importa
+1
+nota_p1 +
+
+37
+Você acorda na hora, se arruma e vai para a UFCG. Dessa vez, com cuidado redobrado!
+1
+37.1 n_importa
+0
+
+37.1
+Chegando na aula, você recebe a nota da prova de Introdução à Computação. Seis!! Você tem certeza que acertou a última questão.
+2
+38 Pedir recorreção da última questão
+41 Deixar isso pra lá
+0
+
+39
+Você vai falar com o professor. Ele analisa a prova cuidadosamente e reconhece o erro na correção. Isso quer dizer que você tirou 8!!
+1
+41 n_importa
+1
+prova_ic +
+
+40
+Você vai falar com o professor, mas ele se lembra do seu rosto. 'Você chega atrasado em todas as minhas aulas!', ele reclama. Depois de um longo sermão, ele 'recorrige' a última questão, mas não encontra erro algum na correção. Que estranho!
+1
+41 n_importa
+0
+
+41
+São 12h em ponto e, devido o calor, sua cabeça já não funciona normalmente. É possível ouvir o som do apocalipse em sua barriga. Como estudante de computação, você consegue prever que almoçará às 13h caso enfrente a fila do R.U. Mas onde há olavão, há esperança
+2
+42 Comer no R.U.
+43 Comer um Big Olavão para acalmar o caos na sua barriga
+0
+
+42
+Você está na cauda da fila, mas por sorte há uma pessoa muito atraente na sua frente. Vocês trocam alguns olhares e você decide comentar a satisfação de não ser um fura fila.
+1
+42.1 n_importa
+1
+amorzinho +
+
+42.1
+Ela diz que sente o mesmo e um diálogo muito agradável se desenrola. Talvez ela seja o ponto e vírgula que faltava para sua vida compilar.
+1
+44 n_importa
+0
+
+43
+Você degusta seu Big Olavão acompanhado de um delicioso suco de maracujá envelhecido por 7 dias em uma garrafa PET. Sua barriga para de fazer barulho, mas surge um intenso enjoo.
+1
+44 n_importa
+2
+dinheiro -
+olavo +
+
+44
+Hora do último miniteste de P1. Você se dirige ao LCC2, senta-se confortavelmente e em seguida começa a resolver. Você precisa fazer 3 questões para passar de unidade.
+1
+45 n_importa
+0
+
+46
+Você conseguiu fazer duas questões, mas continua na mesma unidade
+1
+46.1 n_importa
+0
+
+46.1
+A terceira quase foi, mas você estava nervoso e não conseguiu encontrar o que causou o .....F
+1
+47 n_importa
+0
+
+46.2
+Parabéns! Você treinou muito e terminou P1. Agora é visto como um mago pelos feras que estão presos na unidade 4.
+1
+47 n_importa
+1
+terminou_p1 +
+
+48
+Ao chegar em casa e conectar-se ao wifi do vizinho, você recebe duas mensagens no whatsapp
+1
+48.1 n_importa
+0
+
+48.1
+"oi, desculpa nao ter ido quando vc me chamou... tava muito ocupada. Vamos hj" - Mina gata que faz um ano que só te dá bolo
+1
+48.2 n_importa
+0
+
+48.2
+"Adorei conversar com vc no R.U.... Pensei que a gente podia sair pra o cinema hoje..." - O ponto e vírgula do RU
+1
+48.3 n_importa
+0
+
+48.3
+Lembre se que seus amigos estão zombando que você joga mal no computador...
+3
+50 Sair com a mina gata
+52 Sair com instant crush do R.U.
+51 Aproveitar pra treinar no jogo e ganhar dos amigos
+0
+
+49
+Mensagem no whatsapp...
+1
+49.1 n_importa
+0
+
+49.1
+"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hoje" - Mina gata que faz um ano que só te dá bolo
+2
+50 Aceita o convite
+51 Fica em casa jogando
+0
+
+50
+"Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei hahaha" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
+1
+50.1 n_importa
+0
+
+50.1
+Sendo cavalheiro, você pagou os ingressos e o jantar depois do filme...
+1
+50.2 n_importa
+0
+
+50.2
+"Obrigada por tudo, mas você é como um irmão pra mim!" - Isso foi o que ela disse quando você tentou beijá-la
+1
+53 n_importa
+0
+
+51
+Parece que é só isso que você sabe fazer direito, jogar, jogar e jogar.
+1
+53 n_importa
+0
+
+52
+O filme foi ótimo. Ela pegou na sua mão no final do filme e vocês curtiram os créditos muito próximos um do outro
+1
+52.1 n_importa
+1
+amorzinho +
+
+52.1
+Mais próximos do que seria normal para dois seres humanos que não quisessem se beijar
+1
+52.2 n_importa
+0
+
+52.2
+Ao ir para a garagem, você reuniu toda sua coragem e arriscou um beijo...
+1
+52.3 n_importa
+0
+
+52.3
+Vocês ficaram por horas e marcaram outro encontro, mas sem data definida.
+1
+53 n_importa
+0
+
+53
+"Hora de dormir..."
+1
+54 n_importa
+0
+
+54
+Você acorda normalmente, toma um café da manhã bem reforçado pra sobreviver a mais um dia de fim de período.
+1
+55 n_importa
+0
+
+56
+Como você está sendo um bom amigo, durante a aula seus amigos te chamam para ir no espetinho no fim do dia pra desopilar.
+1
+57 n_importa
+1
+amizade +
+
+57
+Após a aula, deu a hora do almoço e bateu aquela dúvida de sempre...
+2
+58 Comer no RU
+59 Almoçar no Olavão
+0
+
+59.1
+Você come aquele x-burguer basicão. Sente algo esquisito no seu estômago, mas nada sério e logo passa.
+1
+62 n_importa
+1
+olavo +
+
+59.2
+Você come aquele x-burguer basicão.
+1
+59.3 n_importa
+1
+olavo +
+
+59.3
+Algo parece estranho no seu estômago, você pede um suco pra tentar acalmá-lo.
+1
+59.4 n_importa
+0
+
+59.4
+Você sente sua consciência se esvaindo e cai no chão.
+1
+59.5 n_importa
+0
+
+59.5
+Pessoas tentam se aproximar e prestar socorro, mas você só consegue pensar no quão saborosa aparenta ser a carne humana.
+1
+59.6 n_importa
+0
+
+59.6
+Você virou um mutante e agora vive no laguinho junto daqueles que tiveram o mesmo fim que você.
+1
+59.7 n_importa
+0
+
+59.7
+Cuide da sua alimentação.
+1
+FIM_MUTANTE n_importa
+0
+
+60
+Você encontra novamente aquela que já virou o main() do seu programa e conversam até a hora da aula de cálculo. Vocês marcam de sair nesse final de semana e voce gosta cada vez mais dela.
+1
+62 n_importa
+1
+amorzinho +
+
+61
+Você almoça normalmente e vai pra aula de cálculo.
+1
+62 n_importa
+0
+
+62
+Você chega na aula de cálculo. O professor corrigiu sua nota! Você se levanta para ver e...
+1
+FIM n_importa
+0
+
+FIM_REAGIU
+Você morreu porque tentou ser corajoso demais. Lembre-se: você é apenas um estudante de computação.
+1
+resultados n_importa
+0
+
+FIM_MUTANTE
+Você não manteve hábitos muito saudáveis. Eu sei, é apenas um estudante... mas se cuide na próxima!
+1
+resultados n_importa
+0
+
+calculo_rec
+Que droga, você foi mal na prova. Da próxima vez estude mais!
+1
+calculo_rec.1 n_importa
+0
+
+calculo_rec.1
+Você vai precisar fazer prova final.
+1
+resultados n_importa
+0
+
+calculo_aprovado
+Você passou por média!
+1
+resultados n_importa
+0
+
+resultados
+Fim de periodo! O que voce conseguiu? Vamos ver:
+1
+notac1 n_importa
+0
+
+c1_nota6
+6 em cálculo!
+1
+notaic n_importa
+0
+
+c1_nota7
+7 em cálculo! Podia ser melhor... mas podia ser pior.
+1
+notaic n_importa
+0
+
+c1_nota8
+8 em cálculo! O esforço valeu a pena!
+1
+notaic n_importa
+0
+
+c1_nota9
+9 em cálculo I!! Você é o mito dessa matéria, o professor com certeza lembrará de você.
+1
+notaic n_importa
+0
+
+ic_nota6
+6 em Introdução à Computação. Tenho certeza que se você chegasse pontualmente ele perceberia que corrigiu errado sua prova.
+1
+notap1 n_importa
+0
+
+ic_nota8
+8 em Introdução à Computação. Ainda bem que ele recorrigiu!
+1
+notap1 n_importa
+0
+
+p1_incompleto
+Você não terminou todas as unidades de P1. Os conceitos são importantes, corra atrás do que perdeu.
+1
+total_amizade n_importa
+0
+
+p1_completo
+Você terminou todas as unidades de P1!
+1
+total_amizade n_importa
+0
+
+poucos_amigos
+Você saiu pouco com sua turma e, por isso, passou as férias um pouco sozinho. Seja mais sociável!
+1
+total_amor n_importa
+0
+
+muitos_amigos
+Você foi um bom amigo durante o período e é querido por todos da sua turma!
+1
+total_amor n_importa
+0
+
+sem_namorada
+Acaba o período e você não arranja uma namorada! Paciência...
+1
+tela_final
+0
+
+com_namorada
+Nas próximas semanas você e seu crush ficam cada vez mais próximos. Tudo indica que vai dar namoro!
+1
+tela_final
+0
+
+tela_final
+Fim do jogo! Será que poderia ter ido melhor?
+1
+GAME_OVER
+0
+
+
+END
+
+18
+sono 1
+20
+19
+
+34.1
+dinheiro -3
+34.2
+34.3
+
+38
+professor_bravo -1
+40
+39
+
+45
+nota_p1 2
+46
+46.2
+
+47
+amorzinho 0
+49
+48
+
+55
+amizade 1
+57
+56
+
+58
+amorzinho 1
+61
+60
+
+59
+olavo 1
+59.1
+59.2
+
+FIM
+nota_calculo 0
+calculo_rec
+calculo_aprovado
+
+notac1
+nota_calculo 0
+c1_nota6
+notac1.2
+
+notac1.2
+nota_calculo 1
+c1_nota7
+notac1.3
+
+notac1.3
+nota_calculo 2
+c1_nota8
+c1_nota9
+
+notaic
+prova_ic 0
+ic_nota6
+ic_nota8
+
+notap1
+terminou_p1 0
+p1_incompleto
+p1_completo
+
+total_amizade
+amizade 2
+poucos_amigos
+muitos_amigos
+
+total_amor
+amorzinho 2
+sem_namorada
+com_namorada
+
+END
