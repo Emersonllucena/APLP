@@ -69,8 +69,8 @@ readOptions universe opts = do
     showNextLines universe (opts+1) qtd
 
 
-limpaTela :: IO ()
-limpaTela = putStr (take 100 (cycle "\n"))
+clearScreen :: IO ()
+clearScreen = putStr (take 100 (cycle "\n"))
 
 findSpecialState :: String -> [String] -> Int -> Int
 findSpecialState state universe index =
@@ -125,7 +125,7 @@ readState state universe path = do
            else path
 
     let qtdOptions = read (universe !! (comeco+2))
-    limpaTela
+    clearScreen
     putStr (universe !! (comeco + 1) ++ "\n")
     if qtdOptions > 1
         then readOptions universe (comeco+2)
@@ -147,7 +147,7 @@ playGame = do
 
 showCredits :: IO ()
 showCredits = do
-    limpaTela
+    clearScreen
     putStrLn " ----------------------------------------- "
     putStrLn "| Universidade Federal de Campina Grande  |"
     putStrLn "| Departamento de Sistemas e Computação   |"
