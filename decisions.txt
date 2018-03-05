@@ -1,0 +1,410 @@
+2
+São 7h. Seu despertador toca e é hora de se levantar para a aula. Você se lembra que de tarde tem aula de cálculo. Você está com muito sono, e talvez um pouco de sono a mais seja bom.
+3
+3 Levantar e se arrumar para a aula
+4 Ativar a função soneca e dormir mais
+5 Desligar o alarme e voltar a dormir
+0
+
+3
+Você se arrumou com calma, tomou café e foi de ônibus para a universidade. Você conseguiu chegar pontualmente para a aula.
+1
+6 n_importa
+1
+sono +
+
+4
+Você dorme por mais 15 minutos.
+1
+4.5 n_importa
+0
+
+4.5
+Você acorda atrasado para a aula. Se arruma apressado e vai de ônibus para a universidade. Chega atrasado para a aula de Introdução à Computação e recebe uma bronca do professor. Mas pelo menos está descansado!
+1
+6 n_importa
+1
+sono -
+professor_bravo -
+
+5
+Você falta a aula para dormir mais.
+1
+9 n_importa
+1
+sono -
+
+6
+Acabam as aulas da manhã. Hora de almoçar!
+2
+7 Comer na lanchonete do Olavo
+8 Almoçar no RU
+0
+
+7
+Você almoça um sanduíche do Olavo e ainda sobra tempo para estudar para a prova. Porém sua barriga produz movimentos e barulhos estranhos!
+1
+12 n_importa
+2
+nota_calculo +
+dinheiro -
+
+8
+Você passa horas na fila do RU. Não dá tempo de estudar para a prova. Pelo menos economizou dinheiro!
+1
+12 n_importa
+0
+
+9
+De 10h, acorda descansado e estuda para a prova de cálculo.
+1
+9.1 n_importa
+1
+nota_calculo +
+
+9.1
+Hora de almoçar!
+2
+10 Fazer um bom almoço
+11 Preparar um miojo para dar tempo de estudar mais
+0
+
+10
+Você almoça e se sente satisfeito. Em seguida, pega o ônibus para a universidade.
+1
+12 n_importa
+0
+
+11
+Você almoça rapidamente e usa o restante do tempo para estudar. Em seguida, pega o ônibus para a universidade.
+1
+12 n_importa
+1
+nota_calculo +
+
+12
+Hora da prova! Você chega ao CAA a tempo e começa a fazer a temida prova de cálculo.
+1
+13 n_importa
+0
+
+21
+Você não tem mais obrigações para fazer hoje e então você decide que é hora de fazer algo útil com seu tempo.
+2
+22 Estudar python no tst
+23 Chamar crush para ir no cinema
+25 Chamar amigos para ir no cinema
+0
+
+22
+Você terminou duas unidades e já faz loops melhor do que uma montanha-russa! Se sente bem confiante para a próxima prova.
+1
+24 n_importa
+1
+nota_p1 +
+
+23
+- Errr, hoje não vai dar... A amiga do marido da irmã da minha prima de segundo grau está doente e eu vou lá ajudar a cuidar da casa.
+2
+24 Aceitar a situação e ir jogar um pouco
+25 Chamar amigos para o cinema
+0
+
+24
+São 18:00. Você estava descansando e compartilhando memes quando seu colega de quarto te chamou pra comer a pizza que ele pediu. Vocês comem aquela obra de arte com borda recheada enquanto maratonam a nova temporada de Stranger Things.
+1
+26 n_importa
+0
+
+25
+Vocês assistiram Liga da Justiça, que tinha acabado de estreiar, e passam um bom tempo comentando sobre o quão do balacobaco foi o filme!
+1
+25.1 n_importa
+1
+amizade +
+
+25.1
+Está meio tarde e todo mundo divide um uber pra voltar pra casa.
+1
+26 n_importa
+1
+dinheiro -
+
+26
+Você está tão cansado que, ao ver sua cama, adormece assim que encosta a cabeça no travesseiro.
+1
+27 n_importa
+0
+
+27
+Você precisa fazer seu passe escolar para pagar meia passagem no ônibus e sobrar dinheiro pras coxinhas e não tem dia melhor pra isso do que hoje.
+1
+28 n_importa
+0
+
+28
+Você fez o documento sem nenhuma complicação e na volta você desceu na parada de costume, que fica a 3 ruas da sua casa. Mas dessa vez você escuta o típico som de uma 50tinha e nela avista 2 cavalheiros sem capacete.
+3
+29 Agir naturalmente
+30 Correr imediatamente pra casa
+31 Se esconder em um estabelecimento próximo
+0
+
+29
+Você tenta disfarçar, agindo naturalmente.
+1
+29.1 n_importa
+0
+
+29.1
+Eles se aproximam com a moto. Você enxerga um deles com uma peixeira na mão.
+1
+29.2 n_importa
+0
+
+29.2
+A moto passa por você.
+1
+29.3 n_importa
+0
+
+29.3
+Você sua frio.
+1
+29.4
+0
+
+29.4
+Você sente uma mão no ombro.
+1
+29.5
+0
+
+29.5
+- Passa tudo! Anda, anda!
+2
+32 Você se rende e entrega tudo
+33 Reagir
+0
+
+30
+Você se prepara e em uma fração de segundos já está correndo em direção ao prédio.
+1
+30.1 n_importa
+0
+
+30.1
+O barulho da 50tinha aumentou, eles estão te seguindo.
+1
+30.2 n_importa
+0
+
+30.2
+Já dá pra ver o portão da frente. Sua mão já começa a procurar a chave nos bolsos.
+1
+30.3 n_importa
+0
+
+30.3
+Você está de frente ao portão, mas não está conseguindo achar a chave certa!
+1
+30.4 n_importa
+0
+
+30.4
+A chave entrou, mas não está girando! Eles estão chegando e a rua está vazia!
+1
+30.5 n_importa
+0
+
+30.5
+*Cleck!*
+1
+30.6 n_importa
+0
+
+30.6
+O porteiro percebeu a tempo e abriu o portão. Você entra e o fecha, ofegante.
+1
+30.7 n_importa
+0
+
+30.7
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
+1
+34 n_importa
+0
+
+31
+Os sujeitos passam mais de 10 minutos esperando você sair, mas acabam desistindo e vão embora.
+1
+31.1 n_importa
+0
+
+31.1
+Você vai pra casa cautelosamente, olhando para todos os lados como um esquizofrênico.
+1
+31.2 n_importa
+0
+
+31.2
+Essa foi por pouco, você passa o resto do dia descansando e tentando não lembrar disso.
+1
+34 n_importa
+0
+
+32
+Você entrega seu celular, relógio e dinheiro. Volta triste para casa. Mas hey, ainda está vivo!
+1
+34 n_importa
+1
+dinheiro -
+
+33
+Você pega ele pelo braço e gira.
+1
+33.1 n_importa
+0
+
+33.1
+O meliante levanta o joelho e vai atingir seu estômago.
+1
+33.2 n_importa
+0
+
+33.2
+Você desvia e o subjulga, torcendo o braço dele para trás.
+1
+33.3 n_importa
+0
+
+33.3
+Você se sente poderoso e justiceiro ameaçando quebrar o braço do assaltante.
+1
+33.4 n_importa
+0
+
+33.4
+Mas... onde está o outro!?
+1
+33.5 n_importa
+0
+
+33.5
+O outro meliante te esfaqueia por trás.
+1
+33.6 n_importa
+0
+
+33.6
+Pegam suas coisas e saem correndo.
+1
+33.7 n_importa
+1
+dinheiro -
+
+33.7
+Alguém te vê no chão sangrando e ligam para o 192.
+1
+33.8 n_importa
+0
+
+33.8
+Você percebe vagamente que está entrando em uma ambulância.
+1
+33.9 n_importa
+0
+
+33.9
+Você não percebe mais nada.
+1
+33.10 n_importa
+0
+
+33.10
+Você morreu.
+1
+33.11 n_importa
+0
+
+33.11
+Nunca reaja a assaltos.
+1
+FIM n_importa
+0
+
+34
+É domingo. Você está sem nada para fazer, quando recebe uma mensagem dos amigos. Um churrasco da turma!
+1
+34.1 n_importa
+0
+
+34.2
+Como você está mais liso que quiabo, não tem dinheiro para ir para o churrasco. Não tem escolha senão ficar estudando. Que domingo!
+1
+36 n_importa
+0
+
+34.3
+Você economizou um pouco nos últimos dias, portanto pode se dar ao luxo de sair hoje.
+2
+35 Sair com os amigos
+36 Ficar em casa e estudar
+0
+
+35
+Você passa o dia no churrasco com os amigos e se diverte bastante. Chega em casa de noite, cansado demais para estudar. Melhor ir dormir!
+1
+37 n_importa
+2
+dinheiro -
+amizade +
+
+36
+Você passa o domingo estudando para P1, parando algumas vezes para jogar. Ninguém é de ferro! Depois de um dia produtivo, você vai dormir.
+1
+37 n_importa
+1
+nota_p1 +
+
+37
+Você acorda na hora, se arruma e vai para a UFCG. Dessa vez, com cuidado redobrado!
+1
+37.1 n_importa
+0
+
+37.1
+Chegando na aula, você recebe a nota da prova de Introdução à Computação. Seis!! Você tem certeza que acertou a última questão.
+2
+38 Pedir recorreção da última questão 
+41 Deixar isso pra lá
+0
+
+39
+Você vai falar com o professor. Ele analisa a prova cuidadosamente e reconhece o erro na correção. Isso quer dizer que você tirou 8!!
+1
+41 n_importa
+0
+
+40
+Você vai falar com o professor, mas ele se lembra do seu rosto. 'Você chega atrasado em todas as minhas aulas!', ele reclama. Depois de um longo sermão, ele 'recorrige' a última questão, mas não encontra erro algum na correção. Que estranho!
+1
+41 n_importa
+0
+
+END
+18
+sono 1
+20
+19
+
+34.1
+dinheiro -3
+34.2
+34.3
+
+38
+professor_bravo -1
+40
+39
+END
