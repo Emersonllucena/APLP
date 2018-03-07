@@ -33,7 +33,7 @@ naLinhaPrimeiraPalavra(X, L, Arq) :-
 
 primeiraPalavra([], []).
 primeiraPalavra([], [32 | _]).
-primeiraPalavra([H | T], [H | R]) :- cortaPalavra(T, R).
+primeiraPalavra([H | T], [H | R]) :- primeiraPalavra(T, R).
 
 
 /* Predicado para imprimir a linha X como string */
@@ -53,12 +53,15 @@ procuraEstado(X, Y, S, [ _ | C ]) :-
 	Y1 is Y + 1,
 	procuraEstado(X, Y1, S, C).
 
+limpaTela :-
+	nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl, nl.
 
 /* Imprime a mensagem do estado S */
 imprimeEstado(X, S, Arq) :-
 	procuraEstado(X, 1, S, Arq),
 	X1 is X + 1,
 	naLinha(X1, L, Arq),
+	limpaTela,
 	imprimeLinha(L).
 
 /* Le quantas opcoes o usuario possui no estado da linha X */
@@ -71,6 +74,19 @@ proximoEstado(S, X, Arq) :-
 	naLinhaPrimeiraPalavra(X, P, Arq),
 	string_codes(S, P).
 
+leOpcoes(X, 2, Arq) :-
+	X1 is X + 3,
+	write("1 - "), naLinhaCortaPalavra(X1, L1, Arq), imprimeLinha(L1),
+	X2 is X + 4,
+	write("2 - "), naLinhaCortaPalavra(X2, L2, Arq), imprimeLinha(L2), nl.
+
+leOpcoes(X, 3, Arq) :-
+	X1 is X + 3,
+	write("1 - "), naLinhaCortaPalavra(X1, L1, Arq), imprimeLinha(L1),
+	X2 is X + 4,
+	write("2 - "), naLinhaCortaPalavra(X2, L2, Arq), imprimeLinha(L2),
+	X3 is X + 5,
+	write("3 - "), naLinhaCortaPalavra(X3, L3, Arq), imprimeLinha(L3), nl.
 
 /* Predicado principal */
 
@@ -91,12 +107,21 @@ jogaEstado(S, Arq) :-
 	quantasOpcoes(X, Op, Arq),
 	Op >= 2,
 	Op =< 3,
+	
 	imprimeEstado(X, S, Arq),
-	write(Op), nl.
+	nl, write("O que deseja fazer?"), nl,
+	
+	leOpcoes(X, Op, Arq),
+	
+	get(Opt), get_char(_),
+	
+	NX is (X + 2 + Opt - 48),
+	proximoEstado(Prox, NX, Arq),
+	jogaEstado(Prox, Arq).
 
 main:-
 	prompt(_, ''),
 	phrase_from_file(linhas(Arq), decisions),
-	nl, nl, nl, nl, nl,
+	limpaTela,
 	jogaEstado("tutorial", Arq),
 	halt(0).
