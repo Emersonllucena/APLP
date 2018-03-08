@@ -88,21 +88,77 @@ leOpcoes(X, 3, Arq) :-
 	X3 is X + 5,
 	write("3 - "), naLinhaCortaPalavra(X3, L3, Arq), imprimeLinha(L3), nl.
 
+/* Atributo + */
+updateAtt(X, Arq, Att, Att_) :-
+	naLinhaPrimeiraPalavra(X, Arg, Arq),
+	naLinhaCortaPalavra(X, [43], Arq),
+	write(Arg), nl.
+
+/* Atributo - */
+updateAtt(X, Arq, Att, Att_) :-
+	naLinhaPrimeiraPalavra(X, Arg, Arq),
+	naLinhaCortaPalavra(X, [45], Arq),
+	write(Arg), nl.
+
+/* 0 efeitos colaterais */
+novoAtt(X, Arq, Att, Att) :-
+	naLinha(X, C, Arq),
+	number_codes(0, C).
+
+/* 1 efeito colateral */
+novoAtt(X, Arq, Att, Att_) :-
+	naLinha(X, C, Arq),
+	number_codes(1, C),
+	
+	X1 is X + 1,
+	updateAtt(X1, Arq, Att, Att_).
+
+/* 2 efeitos colaterais */
+novoAtt(X, Arq, Att, Att_) :-
+	naLinha(X, C, Arq),
+	number_codes(2, C),
+
+	X1 is X + 1,
+	updateAtt(X1, Arq, Att, Att1),
+
+	X2 is X + 2,
+	updateAtt(X2, Arq, Att1, Att_).
+
+/* 3 efeitos colaterais */
+novoAtt(X, Arq, Att, Att_) :-
+	naLinha(X, C, Arq),
+	number_codes(3, C),
+
+	X1 is X + 1,
+	updateAtt(X1, Arq, Att, Att1),
+
+	X2 is X + 2,
+	updateAtt(X2, Arq, Att1, Att2),
+
+	X3 is X + 3,
+	updateAtt(X3, Arq, Att2, Att_).
+
+
 /* Predicado principal */
 
 /* Uma opcao */
-jogaEstado(S, Arq) :-
+jogaEstado(S, Arq, Att) :-
 	procuraEstado(X, 1, S, Arq),
 	quantasOpcoes(X, 1, Arq),
+	
 	imprimeEstado(X, S, Arq),
 	nl, write("Digite qualquer tecla para continuar..."), nl,
 	get_char(_),
+
+	X4 is X + 4,
+	novoAtt(X4, Arq, Att, Att_),
+
 	X3 is X + 3,
 	proximoEstado(Prox, X3, Arq),
-	jogaEstado(Prox, Arq).
+	jogaEstado(Prox, Arq, Att_).
 
 /* Duas ou tres opcoes */
-jogaEstado(S, Arq) :-	
+jogaEstado(S, Arq, Att) :-	
 	procuraEstado(X, 1, S, Arq),
 	quantasOpcoes(X, Op, Arq),
 	Op >= 2,
@@ -115,13 +171,27 @@ jogaEstado(S, Arq) :-
 	
 	get(Opt), get_char(_),
 	
+	X_ is X + 3 + Op,
+	novoAtt(X_, Arq, Att, Att_),
+
 	NX is (X + 2 + Opt - 48),
 	proximoEstado(Prox, NX, Arq),
-	jogaEstado(Prox, Arq).
+	jogaEstado(Prox, Arq, Att_).
+
+
+/* Estado especial (condicional) */
+jogaEstado(S, Arq, Att) :-
+	procuraEstado(X, 1, S, Arq),
+	procuraEstado(END, 1, "END", Arq),
+	X > END,
+
+	X1 is X + 1,
+	naLinhaPrimeiraPalavra(X1, Arg, Arq),
+	naLinhaCortaPalavra(X1, Quant, Arq).
 
 main:-
 	prompt(_, ''),
 	phrase_from_file(linhas(Arq), decisions),
 	limpaTela,
-	jogaEstado("tutorial", Arq),
-	halt(0).
+	jogaEstado("tutorial", Arq, Att),
+	halt().
