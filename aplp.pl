@@ -88,17 +88,45 @@ leOpcoes(X, 3, Arq) :-
 	X3 is X + 5,
 	write("3 - "), naLinhaCortaPalavra(X3, L3, Arq), imprimeLinha(L3), nl.
 
+
+getKey(0, "sono").
+getKey(1, "nota_calculo").
+getKey(2, "nota_p1").
+getKey(3, "dinheiro").
+getKey(4, "amizade").
+getKey(5, "amorzinho").
+getKey(6, "professor_bravo").
+getKey(7, "olavo").
+getKey(8, "reagiu").
+getKey(9, "prova_ic").
+getKey(10, "terminou_p1").
+
+
+inicializa(Att) :-
+	Att = A{0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0}.
+
 /* Atributo + */
 updateAtt(X, Arq, Att, Att_) :-
 	naLinhaPrimeiraPalavra(X, Arg, Arq),
 	naLinhaCortaPalavra(X, [43], Arq),
-	write(Arg), nl.
+
+	string_codes(L, Arg),
+	getKey(Key, L),
+
+
+	Quant is Att.get(Key) + 1,
+	Att_ = Att.put(Key, Quant).
 
 /* Atributo - */
 updateAtt(X, Arq, Att, Att_) :-
 	naLinhaPrimeiraPalavra(X, Arg, Arq),
 	naLinhaCortaPalavra(X, [45], Arq),
-	write(Arg), nl.
+
+	string_codes(L, Arg),
+	getKey(Key, L),
+
+	Quant is Att.get(Key) - 1,
+	Att_ = Att.put(Key, Quant).
 
 /* 0 efeitos colaterais */
 novoAtt(X, Arq, Att, Att) :-
@@ -151,6 +179,7 @@ jogaEstado(S, Arq, Att) :-
 	get_char(_),
 
 	X4 is X + 4,
+
 	novoAtt(X4, Arq, Att, Att_),
 
 	X3 is X + 3,
@@ -187,11 +216,42 @@ jogaEstado(S, Arq, Att) :-
 
 	X1 is X + 1,
 	naLinhaPrimeiraPalavra(X1, Arg, Arq),
-	naLinhaCortaPalavra(X1, Quant, Arq).
+	naLinhaCortaPalavra(X1, Quant, Arq),
+
+	string_codes(L, Arg),
+	getKey(Key, L),
+	RealQuant is Att.get(Key),
+
+	RealQuant =< Quant,
+
+	X2 is X + 2,
+	proximoEstado(Prox, X2, Arq),
+	jogaEstado(Prox, Arq, Att).
+
+jogaEstado(S, Arq, Att) :-
+	procuraEstado(X, 1, S, Arq),
+	procuraEstado(END, 1, "END", Arq),
+	X > END,
+
+	X1 is X + 1,
+	naLinhaPrimeiraPalavra(X1, Arg, Arq),
+	naLinhaCortaPalavra(X1, Quant, Arq),
+
+	string_codes(L, Arg),
+	getKey(Key, L),
+	RealQuant is Att.get(Key),
+
+	RealQuant > Quant,
+
+	X3 is X + 3,
+	proximoEstado(Prox, X3, Arq),
+	jogaEstado(Prox, Arq, Att).
+
 
 main:-
 	prompt(_, ''),
 	phrase_from_file(linhas(Arq), decisions),
 	limpaTela,
-	jogaEstado("tutorial", Arq, Att),
+	inicializa(Att),
+	jogaEstado("34.1", Arq, Att),
 	halt().
