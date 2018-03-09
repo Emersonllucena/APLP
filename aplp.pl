@@ -266,10 +266,60 @@ jogaEstadoAposCondicional(X, Quant, RealQuant, Arq, Att) :-
 	proximoEstado(Prox, X3, Arq),
 	jogaEstado(Prox, Arq, Att).
 
-main:-
-	prompt(_, ''),
+menu :-
+	nl, nl, nl,
+    write(" -------------------------------- "), nl,
+    write("|         Menu Principal         |"), nl,
+    write(" -------------------------------- "), nl,
+    write("| 1 - Jogar                      |"), nl,
+    write("| 2 - Créditos                   |"), nl,
+    write("| 3 - Sair                       |"), nl,
+    write(" -------------------------------- "), nl,
+
+    get(Opt), get_char(_),
+	Opt_ is Opt - 48,
+
+	menuOpcao(Opt_),
+	menu.
+
+menuOpcao(1) :-
 	phrase_from_file(linhas(Arq), decisions),
 	limpaTela,
 	inicializa(Att),
-	jogaEstado("tutorial", Arq, Att),
-	halt().
+	jogaEstado("tutorial", Arq, Att).
+
+menuOpcao(2) :- creditos.
+menuOpcao(3) :- sair.
+
+menuOpcao(X) :-
+	(X < 1; X > 3),
+	menu.
+
+creditos :-
+	limpaTela,
+	write( " ----------------------------------------- " ), nl,
+    write( "| Universidade Federal de Campina Grande  |" ), nl,
+    write( "| Departamento de Sistemas e Computação   |" ), nl,
+    write( " ----------------------------------------- " ), nl,
+    write( "| Paradigmas de Linguagens de Programação |" ), nl,
+    write( " ----------------------------------------- " ), nl,
+    write( "| Professor:                              |" ), nl,
+    write( "| -- Everton Leandro                      |" ), nl,
+    write( " ----------------------------------------- " ), nl,
+    write( "| Time de Desenvolvimento:                |" ), nl,
+    write( "| -- Daniel Mitre                         |" ), nl,
+    write( "| -- Emerson Lucena                       |" ), nl,
+    write( "| -- Gustavo Ribeiro                      |" ), nl,
+    write( "| -- Rafael Guerra                        |" ), nl,
+    write( "| -- Rerisson Matos                       |" ), nl,
+    write( " ----------------------------------------- " ), nl.
+
+sair :-
+	nl, write("Obrigado por jogar!"), nl,
+	halt.
+
+
+main:-
+	prompt(_, ''),
+	menu,
+	halt.
