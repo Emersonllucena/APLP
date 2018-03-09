@@ -105,7 +105,7 @@ getKey(10, "terminou_p1").
 
 
 inicializa(Att) :-
-	Att = A{0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0}.
+	Att = _{0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0}.
 
 /* Atributo + */
 updateAtt(X, Arq, Att, Att_) :-
@@ -212,24 +212,6 @@ jogaEstado(S, Arq, Att) :-
 	jogaEstadoAposEscolherOpcao(S, X, Arq, Att, Op, Opt_).
 
 
-/* Usuario digitou corretamente */
-jogaEstadoAposEscolherOpcao(_, X, Arq, Att, Op, Opt) :-
-	Opt >= 1,
-	Opt =< Op,
-
-	X_ is X + 3 + Op,
-	novoAtt(X_, Arq, Att, Att_),
-
-	NX is X + 2 + Opt,
-	proximoEstado(Prox, NX, Arq),
-	jogaEstado(Prox, Arq, Att_).
-
-/* Usuario digitou entrada invalida - uma opcao diferente das apresentadas */
-jogaEstadoAposEscolherOpcao(S, _, Arq, Att, Op, Opt) :-
-	(Opt < 1; Opt > Op),
-	jogaEstado(S, Arq, Att).
-
-
 /* Estado especial (condicional) */
 jogaEstado(S, Arq, Att) :-
 	procuraEstado(X, 1, S, Arq),
@@ -249,6 +231,26 @@ jogaEstado(S, Arq, Att) :-
 	jogaEstadoAposCondicional(X, Quant, RealQuant, Arq, Att).
 
 
+jogaEstado("GAME_OVER", _, _).
+
+
+/* Usuario digitou corretamente */
+jogaEstadoAposEscolherOpcao(_, X, Arq, Att, Op, Opt) :-
+	Opt >= 1,
+	Opt =< Op,
+
+	X_ is X + 3 + Op,
+	novoAtt(X_, Arq, Att, Att_),
+
+	NX is X + 2 + Opt,
+	proximoEstado(Prox, NX, Arq),
+	jogaEstado(Prox, Arq, Att_).
+
+/* Usuario digitou entrada invalida - uma opcao diferente das apresentadas */
+jogaEstadoAposEscolherOpcao(S, _, Arq, Att, Op, Opt) :-
+	(Opt < 1; Opt > Op),
+	jogaEstado(S, Arq, Att).
+
 jogaEstadoAposCondicional(X, Quant, RealQuant, Arq, Att) :-
 	RealQuant =< Quant,
 
@@ -263,9 +265,6 @@ jogaEstadoAposCondicional(X, Quant, RealQuant, Arq, Att) :-
 	X3 is X + 3,
 	proximoEstado(Prox, X3, Arq),
 	jogaEstado(Prox, Arq, Att).
-
-
-jogaEstado("GAME_OVER", _, _).
 
 main:-
 	prompt(_, ''),

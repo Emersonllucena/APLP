@@ -172,7 +172,7 @@ nota_p1 +
 Após o estudo, você está cansado e dorme instantaneamente.
 1
 18 n_importa
-0
+0outro
 
 19
 Seu despertador toca, mas você está tão cansado que nem percebe. Exagerou demais ontem! Por conta disso, perdeu a aula da manhã.
@@ -216,7 +216,7 @@ São 18:00. Você estava descansando e compartilhando memes quando seu colega de
 0
 
 25
-Vocês assistiram Liga da Justiça, que tinha acabado de estreiar, e passam um bom tempo comentando sobre o quão do balacobaco foi o filme!
+Vocês assistiram Liga da Justiça, que tinha acabado de estreiar, e passam um bom tempo comentando sobre o quão bom foi o filme!
 1
 25.1 n_importa
 1
@@ -242,7 +242,7 @@ Você precisa fazer seu passe escolar para pagar meia passagem no ônibus e sobr
 0
 
 28
-Você fez o documento sem nenhuma complicação e na volta você desceu na parada de costume, que fica a 3 ruas da sua casa. Mas dessa vez você escuta o típico som de uma 50tinha e nela avista 2 cavalheiros sem capacete.
+Você fez o documento sem nenhuma complicação e na volta você desceu na parada de costume, que fica a 3 ruas da sua casa. Mas dessa vez você escuta o típico som de uma cinquentinha e nela avista 2 cavalheiros sem capacete.
 3
 29 Agir naturalmente
 30 Correr imediatamente pra casa
@@ -579,14 +579,14 @@ Mensagem no whatsapp...
 0
 
 49.1
-"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hoje" - Mina gata que faz um ano que só te dá bolo
+"oi, desculpa nao ter ido ver liga da justiça quando vc me chamou... tava muito ocupada. Vamos hoje" - Menina que faz um ano que só te dá bolo
 2
 50 Aceita o convite
 51 Fica em casa jogando
 0
 
 50
-"Nossa, que filme ruim", "Vamo jogar pipoca no pessoal da frente", "Peidei hahaha" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
+"Nossa, que filme ruim", "Vamos jogar pipoca no pessoal da frente", "Dormi hahaha" - Essas são apenas algumas das frases que ela falou durante o filme. Ela não parava de falar.
 1
 50.1 n_importa
 0
@@ -629,7 +629,7 @@ Ao ir para a garagem, você reuniu toda sua coragem e arriscou um beijo...
 0
 
 52.3
-Vocês ficaram por horas e marcaram outro encontro, mas sem data definida.
+Vocês se divertiram muito e marcaram outro encontro, mas sem data definida.
 1
 53 n_importa
 0
