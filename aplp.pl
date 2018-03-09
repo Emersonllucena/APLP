@@ -88,6 +88,8 @@ leOpcoes(X, 3, Arq) :-
 	X3 is X + 5,
 	write("3 - "), naLinhaCortaPalavra(X3, L3, Arq), imprimeLinha(L3), nl.
 
+menor_igual(X, Y) :- X =< Y.
+maior_que(X, Y) :- X > Y.
 
 getKey(0, "sono").
 getKey(1, "nota_calculo").
@@ -172,6 +174,9 @@ novoAtt(X, Arq, Att, Att_) :-
 /* Uma opcao */
 jogaEstado(S, Arq, Att) :-
 	procuraEstado(X, 1, S, Arq),
+	procuraEstado(END, 1, "END", Arq),
+	X < END,
+
 	quantasOpcoes(X, 1, Arq),
 	
 	imprimeEstado(X, S, Arq),
@@ -189,6 +194,9 @@ jogaEstado(S, Arq, Att) :-
 /* Duas ou tres opcoes */
 jogaEstado(S, Arq, Att) :-	
 	procuraEstado(X, 1, S, Arq),
+	procuraEstado(END, 1, "END", Arq),
+	X < END,
+
 	quantasOpcoes(X, Op, Arq),
 	Op >= 2,
 	Op =< 3,
@@ -199,13 +207,27 @@ jogaEstado(S, Arq, Att) :-
 	leOpcoes(X, Op, Arq),
 	
 	get(Opt), get_char(_),
+	Opt_ is Opt - 48,
 	
+	jogaEstadoAposEscolherOpcao(S, X, Arq, Att, Op, Opt_).
+
+
+/* Usuario digitou corretamente */
+jogaEstadoAposEscolherOpcao(_, X, Arq, Att, Op, Opt) :-
+	Opt >= 1,
+	Opt =< Op,
+
 	X_ is X + 3 + Op,
 	novoAtt(X_, Arq, Att, Att_),
 
-	NX is (X + 2 + Opt - 48),
+	NX is X + 2 + Opt,
 	proximoEstado(Prox, NX, Arq),
 	jogaEstado(Prox, Arq, Att_).
+
+/* Usuario digitou entrada invalida - uma opcao diferente das apresentadas */
+jogaEstadoAposEscolherOpcao(S, _, Arq, Att, Op, Opt) :-
+	(Opt < 1; Opt > Op),
+	jogaEstado(S, Arq, Att).
 
 
 /* Estado especial (condicional) */
@@ -216,31 +238,26 @@ jogaEstado(S, Arq, Att) :-
 
 	X1 is X + 1,
 	naLinhaPrimeiraPalavra(X1, Arg, Arq),
-	naLinhaCortaPalavra(X1, Quant, Arq),
+	naLinhaCortaPalavra(X1, Q, Arq),
+
+	number_codes(Quant, Q),
 
 	string_codes(L, Arg),
 	getKey(Key, L),
 	RealQuant is Att.get(Key),
 
+	jogaEstadoAposCondicional(X, Quant, RealQuant, Arq, Att).
+
+
+jogaEstadoAposCondicional(X, Quant, RealQuant, Arq, Att) :-
 	RealQuant =< Quant,
 
 	X2 is X + 2,
 	proximoEstado(Prox, X2, Arq),
 	jogaEstado(Prox, Arq, Att).
 
-jogaEstado(S, Arq, Att) :-
-	procuraEstado(X, 1, S, Arq),
-	procuraEstado(END, 1, "END", Arq),
-	X > END,
 
-	X1 is X + 1,
-	naLinhaPrimeiraPalavra(X1, Arg, Arq),
-	naLinhaCortaPalavra(X1, Quant, Arq),
-
-	string_codes(L, Arg),
-	getKey(Key, L),
-	RealQuant is Att.get(Key),
-
+jogaEstadoAposCondicional(X, Quant, RealQuant, Arq, Att) :-
 	RealQuant > Quant,
 
 	X3 is X + 3,
@@ -248,10 +265,12 @@ jogaEstado(S, Arq, Att) :-
 	jogaEstado(Prox, Arq, Att).
 
 
+jogaEstado("GAME_OVER", _, _).
+
 main:-
 	prompt(_, ''),
 	phrase_from_file(linhas(Arq), decisions),
 	limpaTela,
 	inicializa(Att),
-	jogaEstado("34.1", Arq, Att),
+	jogaEstado("tutorial", Arq, Att),
 	halt().
