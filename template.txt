@@ -1,0 +1,27 @@
+---------------TEMPLATE--------------------
+
+42         /// ID do estado
+blablabla  /// MSG do estado
+2          /// Quantas possiveis decisoes
+43 blabla  /// Próximo estado + MSG da decisão
+45 etc_etc
+1          /// Quantos efeitos colaterais
+sono +     /// sono aumentou (coloca - se diminuiu)
+
+
+Atributos são 
+sono
+nota_calculo
+nota_p1
+dinheiro
+amizade
+amorzinho
+professor_bravo
+
+
+TEMPLATE CONDICIONAIS - n tem mensagem
+
+43             /// ID do estado
+sono 3         /// sono <= 3
+44             /// proximo estado se condicional for TRUE
+45             /// se for FALSE
